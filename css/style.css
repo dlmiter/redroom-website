@@ -1,6 +1,6 @@
+/* ---------- Basic reset ---------- */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -9,138 +9,209 @@ html {
 }
 
 body {
+    margin: 0;
     min-height: 100vh;
+    background: #111111;
+    color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    background: #050505;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+img,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ---------- Header ---------- */
+
+.site-header {
+    background: #c1121f;
     color: #ffffff;
 }
 
-.hero {
-    min-height: 55vh;
+.navbar {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 40px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #970016, #c1121f);
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
-.hero h1 {
-    font-size: clamp(3rem, 9vw, 7rem);
-    line-height: 1;
+.logo {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    text-decoration: underline;
+}
+
+.hero-content {
+    min-height: 260px;
+    padding: 3rem 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 0.9;
     letter-spacing: 0.04em;
 }
 
-.hero p {
-    margin-top: 24px;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+.hero-content p {
+    margin: 1rem 0 0;
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
     font-weight: 700;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
 }
 
+
+/* ---------- Main content ---------- */
+
 main {
-    width: min(900px, 100%);
-    margin: 0 auto;
-    padding: 20px;
+    min-height: 50vh;
 }
 
 .content-section {
-    padding: 80px 20px;
+    width: min(900px, 100%);
+    margin: 0 auto;
+    padding: 5rem 1.25rem;
     text-align: center;
 }
 
+.content-section h1,
 .content-section h2 {
-    margin-bottom: 40px;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    letter-spacing: 0.06em;
+    margin: 0 0 2.5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    letter-spacing: 0.05em;
 }
+
+
+/* ---------- Karaoke schedule ---------- */
 
 .karaoke-schedule {
     width: min(600px, 100%);
-    margin: 0 auto 50px;
+    margin: 0 auto 3.5rem;
 }
 
 .day {
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 40px;
-    padding: 22px 0;
-    border-bottom: 1px solid #333333;
+    align-items: baseline;
+    gap: 2rem;
+
+    padding: 1rem 0;
+    border-bottom: 1px solid #444444;
 }
 
 .weekday {
     text-align: left;
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-size: clamp(1.3rem, 4vw, 2.2rem);
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
 }
 
 .time {
-    min-width: 70px;
-    text-align: right;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 900;
-    color: #c1121f;
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
 }
+
+
+/* ---------- Buttons ---------- */
 
 .instagram-button {
     display: inline-block;
-    padding: 16px 32px;
-    border-radius: 999px;
+    padding: 0.9rem 1.4rem;
+
     background: #c1121f;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
+
+    border: 2px solid #c1121f;
+    border-radius: 0.25rem;
+
     font-weight: 700;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+    text-decoration: none;
 }
 
-.instagram-button:hover {
-    background: #e0182d;
-    transform: translateY(-2px);
-}
-
+.instagram-button:hover,
 .instagram-button:focus-visible {
-    outline: 3px solid #ffffff;
-    outline-offset: 4px;
+    background: transparent;
 }
+
+
+/* ---------- Contact text ---------- */
+
+.content-section p {
+    margin: 0 auto 1.5rem;
+    max-width: 650px;
+}
+
+.content-section strong {
+    color: #ffffff;
+}
+
+
+/* ---------- Mobile ---------- */
 
 @media (max-width: 650px) {
-    .hero {
-        min-height: 45vh;
+    .navbar {
+        flex-direction: column;
     }
 
-    .hero p {
-        letter-spacing: 0.12em;
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
     }
 
-    main {
-        padding: 0 20px;
+    .hero-content {
+        min-height: 220px;
     }
 
     .content-section {
-        padding: 60px 0;
-    }
-
-    .content-section h2 {
-        margin-bottom: 30px;
+        padding: 4rem 1.25rem;
     }
 
     .day {
-        gap: 20px;
-        padding: 18px 0;
-    }
-
-    .time {
-        min-width: 50px;
-    }
-
-    .instagram-button {
-        width: 100%;
-        max-width: 360px;
+        gap: 1rem;
     }
 }
