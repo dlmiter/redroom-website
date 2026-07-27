@@ -156,25 +156,15 @@ main {
 }
 
 
-/* ---------- Buttons ---------- */
+/* ---------- Instagram icons ---------- */
 
-.instagram-button {
-    display: inline-block;
-    padding: 0.9rem 1.4rem;
-
-    background: #c1121f;
-    color: #ffffff;
-
-    border: 2px solid #c1121f;
-    border-radius: 0.25rem;
-
-    font-weight: 700;
-    text-decoration: none;
+.nav-links .fa-instagram {
+    font-size: 1.8rem;
+    transition: transform 0.2s ease;
 }
 
-.instagram-button:hover,
-.instagram-button:focus-visible {
-    background: transparent;
+.nav-links .fa-instagram:hover {
+    transform: scale(1.1);
 }
 
 
