@@ -234,34 +234,18 @@ main {
 
 /* ---------- Instagram section ---------- */
 
-.instagram-grid {
-    width: min(1000px, 100%);
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-}
-
-.instagram-card {
-    min-height: 280px;
-
+.instagram-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    border: 1px solid #444444;
-    background: #1a1a1a;
-    color: #ffffff;
-
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-decoration: none;
 }
 
-.instagram-card:hover,
-.instagram-card:focus-visible {
-    border-color: #c1121f;
+.instagram-section h2 {
+    margin-bottom: 2.5rem;
+}
+
+.instagram-section .instagram-media {
+    margin: 0 auto !important;
 }
 
 
