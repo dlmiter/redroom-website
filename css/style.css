@@ -34,6 +34,8 @@ iframe {
 .site-header {
     background: #c1121f;
     color: #ffffff;
+
+    border-top: 56px solid #000000;
 }
 
 .navbar {
