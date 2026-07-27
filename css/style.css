@@ -331,3 +331,27 @@ main {
         gap: 2.5rem;
     }
 }
+
+/* ---------- Footer Instagram icon ---------- */
+
+.instagram-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.instagram-icon .fa-instagram {
+    font-size: 2.5rem;
+    transition: transform 0.2s ease;
+}
+
+.instagram-icon:hover .fa-instagram {
+    transform: scale(1.1);
+}
+
+.footer-grid .instagram-icon {
+    text-decoration: none;
+}
