@@ -17,6 +17,7 @@
 
 <body>
 
+    <!-- Header -->
     <header class="site-header">
 
         <nav class="navbar" aria-label="Huvudmeny">
@@ -26,14 +27,8 @@
             </a>
 
             <ul class="nav-links">
-                <li>
-                    <a href="karaoke.html">Karaoke</a>
-                </li>
-
-                <li>
-                    <a href="kontakt.html">Kontakt</a>
-                </li>
-
+                <li><a href="#karaoke">Karaoke</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
                 <li>
                     <a
                         href="https://www.instagram.com/redroom_uppsala/"
@@ -54,9 +49,23 @@
 
     </header>
 
+
     <main>
 
-        <section class="content-section" aria-labelledby="karaoke-title">
+        <!-- Video strip 1 -->
+        <section class="video-strip" aria-label="Red Room video">
+            <video autoplay muted loop playsinline>
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
+        </section>
+
+
+        <!-- Karaoke -->
+        <section
+            class="content-section karaoke-section"
+            id="karaoke"
+            aria-labelledby="karaoke-title"
+        >
 
             <h2 id="karaoke-title">KARAOKE</h2>
 
@@ -79,18 +88,135 @@
 
             </div>
 
-            <a
-                class="instagram-button"
-                href="https://www.instagram.com/redroom_uppsala/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Följ oss på Instagram
-            </a>
+        </section>
+
+
+        <!-- Video strip 2 -->
+        <section class="video-strip" aria-label="Red Room video">
+            <video autoplay muted loop playsinline>
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
+        </section>
+
+
+        <!-- Instagram -->
+        <section
+            class="content-section instagram-section"
+            aria-labelledby="instagram-title"
+        >
+
+            <h2 id="instagram-title">FÖLJ OSS</h2>
+
+            <div class="instagram-grid">
+
+                <a
+                    class="instagram-card"
+                    href="https://www.instagram.com/redroom_uppsala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    class="instagram-card"
+                    href="https://www.instagram.com/redroom_uppsala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    class="instagram-card"
+                    href="https://www.instagram.com/redroom_uppsala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Video strip 3 -->
+        <section class="video-strip" aria-label="Red Room video">
+            <video autoplay muted loop playsinline>
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
+        </section>
+
+
+        <!-- Google Maps -->
+        <section class="map-section" aria-label="Karta till Red Room Uppsala">
+
+            <iframe
+                src="https://www.google.com/maps?q=Kungsgatan+41,+Uppsala&output=embed"
+                title="Karta till Red Room, Kungsgatan 41 i Uppsala"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
 
         </section>
 
     </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer" id="kontakt">
+
+        <div class="footer-grid">
+
+            <section>
+                <h2>ÖPPETTIDER</h2>
+                <p>Bar</p>
+                <p>Öppet alla dagar</p>
+            </section>
+
+            <section>
+                <h2>KONTAKT</h2>
+
+                <p>
+                    <a href="tel:+46707206575">
+                        070 720 65 75
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:redroomuppsala@gmail.com">
+                        redroomuppsala@gmail.com
+                    </a>
+                </p>
+
+                <address>
+                    Kungsgatan 41<br>
+                    Uppsala
+                </address>
+            </section>
+
+            <section>
+                <h2>FÖLJ OSS</h2>
+
+                <a
+                    class="instagram-button"
+                    href="https://www.instagram.com/redroom_uppsala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+            </section>
+
+        </div>
+
+        <div class="footer-bottom">
+            <a href="integritet.html">Integritetspolicy</a>
+        </div>
+
+    </footer>
+
 
     <script src="js/script.js"></script>
 
