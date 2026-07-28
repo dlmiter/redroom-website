@@ -51,7 +51,7 @@ iframe {
 
 .logo {
     color: #ffffff;
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Besley", serif;
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
@@ -94,7 +94,7 @@ iframe {
 .hero-content h1 {
     margin: 0;
 
-    font-family: "Cormorant Garamond", serif;
+    font-family: "Besley", serif;
     font-weight: 700;
 
     font-size: clamp(5rem, 12vw, 10rem);
