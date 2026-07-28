@@ -336,6 +336,10 @@ main {
 
 /* ---------- Footer Instagram icon ---------- */
 
+.footer-grid section:last-child {
+    text-align: center;
+}
+
 .instagram-icon {
     display: inline-flex;
     align-items: center;
@@ -352,8 +356,4 @@ main {
 
 .instagram-icon:hover .fa-instagram {
     transform: scale(1.1);
-}
-
-.footer-grid .instagram-icon {
-    text-decoration: none;
 }
