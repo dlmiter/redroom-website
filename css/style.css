@@ -357,3 +357,9 @@ main {
 .instagram-icon:hover .fa-instagram {
     transform: scale(1.1);
 }
+
+/* Instagram heading */
+
+.instagram-title {
+    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+}
