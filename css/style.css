@@ -169,6 +169,52 @@ main {
     color: #ffdeab;
 }
 
+/* ---------- Bar opening hours ---------- */
+
+.opening-hours-section h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.opening-hours-list {
+    width: min(600px, 100%);
+    margin: 0 auto;
+}
+
+.hours-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 2rem;
+
+    padding: 0.9rem 0;
+    border-bottom: 1px solid #444444;
+}
+
+.hours-day {
+    text-align: left;
+    font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.hours-time {
+    color: #ffdeab;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.hours-row.is-today {
+    padding: 1.25rem 0;
+}
+
+.hours-row.is-today .hours-day {
+    font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+}
+
+.hours-row.is-today .hours-time {
+    font-size: clamp(1.9rem, 6vw, 3rem);
+}
 
 /* ---------- Instagram icons ---------- */
 
