@@ -235,6 +235,21 @@ main {
     object-fit: cover;
 }
 
+/* ---------- Bar image strip ---------- */
+
+.image-strip {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.image-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /* ---------- Instagram section ---------- */
 
@@ -344,6 +359,9 @@ main {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
+
+    .image-strip {
+    height: 220px;
 }
 
 /* ---------- Footer Instagram icon ---------- */
@@ -383,5 +401,6 @@ main {
         font-size: min(15vw, 4rem);
         white-space: nowrap;
         letter-spacing: -0.02em;
+        
     }
 }
