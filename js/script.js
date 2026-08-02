@@ -1,11 +1,11 @@
 const openingHours = [
-    { day: "SÖNDAG", time: "19–02" },
-    { day: "MÅNDAG", time: "19–02" },
-    { day: "TISDAG", time: "19–02" },
-    { day: "ONSDAG", time: "19–02" },
-    { day: "TORSDAG", time: "19–02" },
-    { day: "FREDAG", time: "19–03" },
-    { day: "LÖRDAG", time: "19–03" }
+    { day: "SÖNDAG", time: "19 – 02" },
+    { day: "MÅNDAG", time: "19 – 02" },
+    { day: "TISDAG", time: "19 – 02" },
+    { day: "ONSDAG", time: "19 – 02" },
+    { day: "TORSDAG", time: "19 – 02" },
+    { day: "FREDAG", time: "19 – 03" },
+    { day: "LÖRDAG", time: "19 – 03" }
 ];
 
 const hoursList = document.getElementById("opening-hours-list");
