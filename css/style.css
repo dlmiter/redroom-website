@@ -39,14 +39,13 @@ iframe {
 .navbar {
     width: 100%;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 0.65rem 2rem;
 
     background: #000000;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
+    justify-content: space-end;
 }
 
 .logo {
