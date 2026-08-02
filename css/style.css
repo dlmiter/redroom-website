@@ -328,17 +328,33 @@ main {
 }
 
 
-/* ---------- Map ---------- */
+/* ---------- Map and venue image ---------- */
 
-.map-section {
+.location-section {
     width: 100%;
-    height: 450px;
+    height: 280px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.map-section iframe {
+.map-section,
+.venue-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.map-section iframe,
+.venue-image img {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.venue-image img {
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -405,8 +421,14 @@ main {
         height: 220px;
     }
 
-    .map-section {
-        height: 360px;
+    .location-section {
+    height: auto;
+    grid-template-columns: 1fr;
+    }
+
+    .map-section,
+    .venue-image {
+        height: 220px;
     }
 
     .footer-grid {
