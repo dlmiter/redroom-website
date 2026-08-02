@@ -80,8 +80,8 @@ iframe {
 }
 
 .hero-content {
-    min-height: 260px;
-    padding: 3rem 1.25rem;
+    min-height: 210px;
+    padding: 2rem 1.25rem;
 
     display: flex;
     flex-direction: column;
