@@ -171,12 +171,17 @@ main {
 
 /* ---------- Bar opening hours ---------- */
 
+.opening-hours-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
 .opening-hours-section h2 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 .opening-hours-list {
-    width: min(600px, 100%);
+    width: min(560px, 100%);
     margin: 0 auto;
 }
 
@@ -184,36 +189,39 @@ main {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: baseline;
-    gap: 2rem;
+    gap: 1.5rem;
 
-    padding: 0.9rem 0;
+    padding: 0.55rem 0;
     border-bottom: 1px solid #444444;
 }
 
 .hours-day {
     text-align: left;
-    font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+    font-size: clamp(1.05rem, 3vw, 1.45rem);
     font-weight: 800;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
 }
 
 .hours-time {
     color: #ffdeab;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
     font-weight: 800;
     line-height: 1;
+    white-space: nowrap;
 }
 
+/* Today */
+
 .hours-row.is-today {
-    padding: 1.25rem 0;
+    padding: 0.85rem 0;
 }
 
 .hours-row.is-today .hours-day {
-    font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+    font-size: clamp(1.3rem, 3.8vw, 1.8rem);
 }
 
 .hours-row.is-today .hours-time {
-    font-size: clamp(1.9rem, 6vw, 3rem);
+    font-size: clamp(1.65rem, 5vw, 2.3rem);
 }
 
 /* ---------- Instagram icons ---------- */
