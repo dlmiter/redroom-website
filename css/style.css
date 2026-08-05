@@ -226,7 +226,7 @@ main {
 
 .hours-open,
 .karaoke-status {
-    text-align: left;
+    text-align: right;
     white-space: nowrap;
 }
 
