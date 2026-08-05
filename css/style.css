@@ -39,13 +39,9 @@ iframe {
 .navbar {
     width: 100%;
     margin: 0;
-    padding: 0.65rem 2rem;
+    padding: 0.65rem 0;
 
     background: #000000;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-end;
 }
 
 .logo {
@@ -58,13 +54,18 @@ iframe {
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.nav-links li {
+    text-align: center;
 }
 
 .nav-links a {
@@ -251,14 +252,16 @@ main {
 
 @media (max-width: 650px) {
     .navbar {
-        flex-direction: column;
-    }
+        padding: 0.55rem 0;
+}
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem 1rem;
-    }
+    .nav-links a {
+        font-size: clamp(0.68rem, 2.7vw, 0.9rem);
+}
+
+    .nav-links .fa-instagram {
+        font-size: 1.5rem;
+}
 
     .hero-content {
         min-height: 180px;
