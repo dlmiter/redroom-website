@@ -160,9 +160,9 @@ main {
 
 .karaoke-current-day {
     display: grid;
-    grid-template-columns: 7.5rem auto;
+    grid-template-columns: 6.5ch auto;
     align-items: baseline;
-    column-gap: 0.75rem;
+    column-gap: 0.4rem;
     text-align: left;
 }
 
@@ -263,9 +263,9 @@ main {
 
 .hours-current-day {
     display: grid;
-    grid-template-columns: 7.5rem auto;
+    grid-template-columns: 6.5ch auto;
     align-items: baseline;
-    column-gap: 0.75rem;
+    column-gap: 0.4rem;
     text-align: left;
 }
 
@@ -274,6 +274,9 @@ main {
     font-size: clamp(1.5rem, 4.5vw, 2.2rem);
     font-weight: 900;
     letter-spacing: 0.04em;
+
+    text-align: right;
+    white-space: nowrap;
 
     animation: opening-status-dim 3.5s ease-in-out infinite;
 }
