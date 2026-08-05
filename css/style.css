@@ -159,11 +159,10 @@ main {
 }
 
 .karaoke-current-day {
-    display: flex;
+    display: grid;
+    grid-template-columns: 7.5rem auto;
     align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-
+    column-gap: 0.75rem;
     text-align: left;
 }
 
@@ -225,6 +224,12 @@ main {
     }
 }
 
+.hours-open,
+.karaoke-status {
+    text-align: left;
+    white-space: nowrap;
+}
+
 /* ---------- Bar opening hours ---------- */
 
 .opening-hours-section {
@@ -257,10 +262,10 @@ main {
 }
 
 .hours-current-day {
-    display: flex;
+    display: grid;
+    grid-template-columns: 7.5rem auto;
     align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.65rem;
+    column-gap: 0.75rem;
     text-align: left;
 }
 
