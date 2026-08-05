@@ -177,22 +177,42 @@ main {
 }
 
 .opening-hours-section h2 {
+    margin-bottom: 1.75rem;
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 .opening-hours-list {
-    width: min(560px, 100%);
+    width: min(650px, 100%);
     margin: 0 auto;
 }
 
 .hours-row {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
     gap: 1.5rem;
 
-    padding: 0.55rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #444444;
+}
+
+.hours-row:last-child {
+    border-bottom: 0;
+}
+
+.hours-current-day {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    text-align: left;
+}
+
+.hours-open {
+    color: #c1121f;
+    font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+    font-weight: 900;
+    letter-spacing: 0.04em;
 }
 
 .hours-day {
@@ -210,18 +230,32 @@ main {
     white-space: nowrap;
 }
 
-/* Today */
+/* Current day */
 
 .hours-row.is-today {
-    padding: 0.85rem 0;
+    padding: 1rem 0;
 }
 
 .hours-row.is-today .hours-day {
-    font-size: clamp(1.3rem, 3.8vw, 1.8rem);
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
 }
 
 .hours-row.is-today .hours-time {
-    font-size: clamp(1.65rem, 5vw, 2.3rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+/* Two compact summary rows */
+
+.hours-summary-row {
+    padding: 0.65rem 0;
+}
+
+.hours-summary-row .hours-day {
+    font-size: clamp(0.95rem, 2.7vw, 1.3rem);
+}
+
+.hours-summary-row .hours-time {
+    font-size: clamp(1.2rem, 3.5vw, 1.7rem);
 }
 
 /* ---------- Instagram icons ---------- */
