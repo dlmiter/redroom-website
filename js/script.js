@@ -1,36 +1,36 @@
-const openingHours = [
-    { day: "SÖNDAG", time: "19 – 02" },
-    { day: "MÅNDAG", time: "19 – 02" },
-    { day: "TISDAG", time: "19 – 02" },
-    { day: "ONSDAG", time: "19 – 02" },
-    { day: "TORSDAG", time: "19 – 02" },
-    { day: "FREDAG", time: "19 – 03" },
-    { day: "LÖRDAG", time: "19 – 03" }
-];
+const openingHoursList = document.getElementById("opening-hours-list");
 
-const hoursList = document.getElementById("opening-hours-list");
+if (openingHoursList) {
+    const currentDay = new Intl.DateTimeFormat("sv-SE", {
+        weekday: "long",
+        timeZone: "Europe/Stockholm"
+    })
+        .format(new Date())
+        .toUpperCase();
 
-if (hoursList) {
-    const todayIndex = new Date().getDay();
+    const currentTime =
+        currentDay === "FREDAG" || currentDay === "LÖRDAG"
+            ? "19 – 03"
+            : "19 – 02";
 
-    const orderedHours = [
-        ...openingHours.slice(todayIndex),
-        ...openingHours.slice(0, todayIndex)
-    ];
+    openingHoursList.innerHTML = `
+        <div class="hours-row is-today">
+            <div class="hours-current-day">
+                <span class="hours-open">ÖPPET</span>
+                <span class="hours-day">${currentDay}</span>
+            </div>
 
-    orderedHours.forEach((entry, index) => {
-        const row = document.createElement("div");
-        row.className = "hours-row";
+            <span class="hours-time">${currentTime}</span>
+        </div>
 
-        if (index === 0) {
-            row.classList.add("is-today");
-        }
+        <div class="hours-row hours-summary-row">
+            <span class="hours-day">SÖNDAG – TORSDAG</span>
+            <span class="hours-time">19 – 02</span>
+        </div>
 
-        row.innerHTML = `
-            <span class="hours-day">${entry.day}</span>
-            <span class="hours-time">${entry.time}</span>
-        `;
-
-        hoursList.appendChild(row);
-    });
+        <div class="hours-row hours-summary-row">
+            <span class="hours-day">FREDAG – LÖRDAG</span>
+            <span class="hours-time">19 – 03</span>
+        </div>
+    `;
 }
