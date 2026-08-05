@@ -210,9 +210,28 @@ main {
 
 .hours-open {
     color: #c1121f;
-    font-size: clamp(1.35rem, 3.5vw, 1.9rem);
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
     font-weight: 900;
     letter-spacing: 0.04em;
+
+    animation: opening-status-dim 3.5s ease-in-out infinite;
+}
+
+@keyframes opening-status-dim {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hours-open {
+        animation: none;
+    }
 }
 
 .hours-day {
