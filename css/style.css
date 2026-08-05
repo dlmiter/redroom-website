@@ -140,33 +140,89 @@ main {
 /* ---------- Karaoke schedule ---------- */
 
 .karaoke-schedule {
-    width: min(600px, 100%);
-    margin: 0 auto 3.5rem;
+    width: min(650px, 100%);
+    margin: 0 auto;
 }
 
-.day {
+.karaoke-row {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: baseline;
-    gap: 2rem;
+    gap: 1.5rem;
 
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid #444444;
 }
 
-.weekday {
-    text-align: left;
-    font-size: clamp(1.3rem, 4vw, 2.2rem);
-    font-weight: 800;
-    letter-spacing: 0.04em;
+.karaoke-row:last-child {
+    border-bottom: 0;
 }
 
-.time {
-    font-size: clamp(2.2rem, 7vw, 4rem);
+.karaoke-current-day {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+
+    text-align: left;
+}
+
+.karaoke-status {
+    color: #c1121f;
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+
+    animation: opening-status-dim 3.5s ease-in-out infinite;
+}
+
+.karaoke-day {
+    text-align: left;
+    font-size: clamp(1.05rem, 3vw, 1.45rem);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+}
+
+.karaoke-time {
+    color: #ffdeab;
+    font-size: clamp(1.35rem, 4vw, 1.9rem);
     font-weight: 800;
     line-height: 1;
-    
-    color: #ffdeab;
+    white-space: nowrap;
+}
+
+/* Current or next karaoke day */
+
+.karaoke-row.is-current {
+    padding: 1rem 0;
+}
+
+.karaoke-row.is-current .karaoke-day {
+    font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+}
+
+.karaoke-row.is-current .karaoke-time {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+/* Compact weekly schedule */
+
+.karaoke-summary-row {
+    padding: 0.65rem 0;
+}
+
+.karaoke-summary-row .karaoke-day {
+    font-size: clamp(0.95rem, 2.7vw, 1.3rem);
+}
+
+.karaoke-summary-row .karaoke-time {
+    font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .karaoke-status {
+        animation: none;
+    }
 }
 
 /* ---------- Bar opening hours ---------- */
