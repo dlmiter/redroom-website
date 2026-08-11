@@ -60,7 +60,7 @@ iframe {
     list-style: none;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     align-items: center;
 }
 
@@ -72,6 +72,19 @@ iframe {
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
+}
+
+.language-toggle {
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: 0;
+
+    font-size: 1.7rem;
+    line-height: 1;
+
+    cursor: pointer;
 }
 
 .nav-links a:hover,
@@ -376,6 +389,10 @@ main {
 
     .nav-links .fa-instagram {
         font-size: 1.5rem;
+}
+
+    .language-toggle {
+        font-size: 1.4rem;
 }
 
     .hero-content {
