@@ -1,15 +1,30 @@
 const openingHoursList = document.getElementById("opening-hours-list");
 const karaokeSchedule = document.getElementById("karaoke-schedule");
+const languageToggle = document.getElementById("language-toggle");
 
-const dayNames = [
-    "SÖNDAG",
-    "MÅNDAG",
-    "TISDAG",
-    "ONSDAG",
-    "TORSDAG",
-    "FREDAG",
-    "LÖRDAG"
-];
+let currentLanguage = "sv";
+
+const dayNames = {
+    sv: [
+        "SÖNDAG",
+        "MÅNDAG",
+        "TISDAG",
+        "ONSDAG",
+        "TORSDAG",
+        "FREDAG",
+        "LÖRDAG"
+    ],
+
+    en: [
+        "SUNDAY",
+        "MONDAY",
+        "TUESDAY",
+        "WEDNESDAY",
+        "THURSDAY",
+        "FRIDAY",
+        "SATURDAY"
+    ]
+};
 
 const dayIndexes = {
     söndag: 0,
@@ -88,10 +103,29 @@ function renderOpeningHours() {
         minutesNow >= opensAt ||
         minutesNow < previousDayClosesAt;
 
-    const statusText = isOpen ? "ÖPPET" : "ÖPPNAR";
-    const currentDay = dayNames[dayIndex];
-    const currentClosingHour = closingHours[dayIndex];
-    const currentTime = `19 – 0${currentClosingHour}`;
+    const statusText =
+        currentLanguage === "sv"
+            ? (isOpen ? "ÖPPET" : "ÖPPNAR")
+            : (isOpen ? "OPEN" : "OPENS");
+
+    const currentDay =
+        dayNames[currentLanguage][dayIndex];
+
+    const currentClosingHour =
+        closingHours[dayIndex];
+
+    const currentTime =
+        `19 – 0${currentClosingHour}`;
+
+    const firstSummary =
+        currentLanguage === "sv"
+            ? "SÖNDAG – TORSDAG"
+            : "SUNDAY – THURSDAY";
+
+    const secondSummary =
+        currentLanguage === "sv"
+            ? "FREDAG – LÖRDAG"
+            : "FRIDAY – SATURDAY";
 
     openingHoursList.innerHTML = `
         <div class="hours-row is-today">
@@ -104,12 +138,12 @@ function renderOpeningHours() {
         </div>
 
         <div class="hours-row hours-summary-row">
-            <span class="hours-day">SÖNDAG – TORSDAG</span>
+            <span class="hours-day">${firstSummary}</span>
             <span class="hours-time">19 – 02</span>
         </div>
 
         <div class="hours-row hours-summary-row">
-            <span class="hours-day">FREDAG – LÖRDAG</span>
+            <span class="hours-day">${secondSummary}</span>
             <span class="hours-time">19 – 03</span>
         </div>
     `;
@@ -148,29 +182,43 @@ function renderKaraokeSchedule() {
         karaokeStartHours[dayIndex] !== undefined;
 
     let displayedDayIndex;
-    let statusText;
+    let isLive = false;
 
     if (previousKaraokeStillLive) {
         displayedDayIndex = previousDayIndex;
-        statusText = "LIVE";
+        isLive = true;
     } else if (todayHasKaraoke) {
         displayedDayIndex = dayIndex;
 
         const startsAt =
             karaokeStartHours[dayIndex] * 60;
 
-        statusText =
-            minutesNow >= startsAt
-                ? "LIVE"
-                : "BÖRJAR";
+        isLive = minutesNow >= startsAt;
     } else {
-        displayedDayIndex = getNextKaraokeDay(dayIndex);
-        statusText = "BÖRJAR";
+        displayedDayIndex =
+            getNextKaraokeDay(dayIndex);
     }
 
-    const displayedDay = dayNames[displayedDayIndex];
+    const statusText =
+        currentLanguage === "sv"
+            ? (isLive ? "LIVE" : "BÖRJAR")
+            : (isLive ? "LIVE" : "STARTS");
+
+    const displayedDay =
+        dayNames[currentLanguage][displayedDayIndex];
+
     const displayedStart =
         karaokeStartHours[displayedDayIndex];
+
+    const firstSummary =
+        currentLanguage === "sv"
+            ? "ONSDAG – TORSDAG"
+            : "WEDNESDAY – THURSDAY";
+
+    const secondSummary =
+        currentLanguage === "sv"
+            ? "FREDAG – LÖRDAG"
+            : "FRIDAY – SATURDAY";
 
     karaokeSchedule.innerHTML = `
         <div class="karaoke-row is-current">
@@ -183,22 +231,135 @@ function renderKaraokeSchedule() {
         </div>
 
         <div class="karaoke-row karaoke-summary-row">
-            <span class="karaoke-day">ONSDAG – TORSDAG</span>
+            <span class="karaoke-day">${firstSummary}</span>
             <span class="karaoke-time">21</span>
         </div>
 
         <div class="karaoke-row karaoke-summary-row">
-            <span class="karaoke-day">FREDAG – LÖRDAG</span>
+            <span class="karaoke-day">${secondSummary}</span>
             <span class="karaoke-time">22</span>
         </div>
     `;
 }
 
-function renderDynamicInformation() {
+function renderStaticLanguage() {
+    const openingLink =
+        document.querySelector('a[href="#oppettider"]');
+
+    const contactLink =
+        document.querySelector('a[href="#kontakt"]');
+
+    const openingTitle =
+        document.getElementById("opening-hours-title");
+
+    const instagramTitle =
+        document.getElementById("instagram-title");
+
+    const footerHeadings =
+        document.querySelectorAll(".footer-grid h2");
+
+    const privacyLink =
+        document.querySelector(".footer-bottom a");
+
+    if (currentLanguage === "sv") {
+        document.documentElement.lang = "sv";
+
+        if (openingLink) {
+            openingLink.textContent = "ÖPPETTIDER";
+        }
+
+        if (contactLink) {
+            contactLink.textContent = "KONTAKT";
+        }
+
+        if (openingTitle) {
+            openingTitle.textContent = "ÖPPETTIDER BAR";
+        }
+
+        if (instagramTitle) {
+            instagramTitle.textContent = "FÖLJ TALANGERNA";
+        }
+
+        if (footerHeadings[0]) {
+            footerHeadings[0].textContent = "KONTAKT";
+        }
+
+        if (footerHeadings[1]) {
+            footerHeadings[1].textContent = "FÖLJ OSS";
+        }
+
+        if (privacyLink) {
+            privacyLink.textContent = "Integritetspolicy";
+        }
+
+        if (languageToggle) {
+            languageToggle.textContent = "🇬🇧";
+            languageToggle.setAttribute(
+                "aria-label",
+                "Switch to English"
+            );
+        }
+    } else {
+        document.documentElement.lang = "en";
+
+        if (openingLink) {
+            openingLink.textContent = "OPENING HOURS";
+        }
+
+        if (contactLink) {
+            contactLink.textContent = "CONTACT";
+        }
+
+        if (openingTitle) {
+            openingTitle.textContent = "BAR HOURS";
+        }
+
+        if (instagramTitle) {
+            instagramTitle.textContent = "FOLLOW THE SINGERS";
+        }
+
+        if (footerHeadings[0]) {
+            footerHeadings[0].textContent = "CONTACT";
+        }
+
+        if (footerHeadings[1]) {
+            footerHeadings[1].textContent = "FOLLOW US";
+        }
+
+        if (privacyLink) {
+            privacyLink.textContent = "Privacy policy";
+        }
+
+        if (languageToggle) {
+            languageToggle.textContent = "🇸🇪";
+            languageToggle.setAttribute(
+                "aria-label",
+                "Byt till svenska"
+            );
+        }
+    }
+}
+
+function renderEverything() {
+    renderStaticLanguage();
     renderOpeningHours();
     renderKaraokeSchedule();
 }
 
-renderDynamicInformation();
+if (languageToggle) {
+    languageToggle.addEventListener("click", () => {
+        currentLanguage =
+            currentLanguage === "sv"
+                ? "en"
+                : "sv";
 
-window.setInterval(renderDynamicInformation, 60000);
+        renderEverything();
+    });
+}
+
+renderEverything();
+
+window.setInterval(() => {
+    renderOpeningHours();
+    renderKaraokeSchedule();
+}, 60000);
