@@ -381,19 +381,20 @@ main {
 @media (max-width: 650px) {
     .navbar {
         padding: 0.55rem 0;
-}
+    }
 
     .nav-links a {
-        font-size: clamp(0.68rem, 2.7vw, 0.9rem);
-}
+        font-size: clamp(0.65rem, 2.6vw, 0.85rem);
+        white-space: nowrap;
+    }
 
     .nav-links .fa-instagram {
         font-size: 1.5rem;
-}
+    }
 
     .language-toggle {
         font-size: 1.4rem;
-}
+    }
 
     .hero-content {
         min-height: 180px;
@@ -403,8 +404,31 @@ main {
         padding: 3rem 1.25rem;
     }
 
-    .day {
-        gap: 1rem;
+    .karaoke-row,
+    .hours-row {
+        gap: 0.75rem;
+    }
+
+    .karaoke-current-day,
+    .hours-current-day {
+        gap: 0.5rem;
+    }
+
+    .karaoke-summary-row .karaoke-day,
+    .hours-summary-row .hours-day {
+        font-size: 0.9rem;
+        letter-spacing: 0.01em;
+    }
+
+    html[lang="en"] .nav-links a {
+        font-size: clamp(0.58rem, 2.25vw, 0.75rem);
+    }
+
+    html[lang="en"] .karaoke-summary-row .karaoke-day,
+    html[lang="en"] .hours-summary-row .hours-day {
+        font-size: 0.78rem;
+        letter-spacing: 0;
+        white-space: nowrap;
     }
 }
 
