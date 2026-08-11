@@ -383,6 +383,12 @@ main {
         padding: 0.55rem 0;
     }
 
+    .nav-links {
+        grid-template-columns: 1fr 1.55fr 1fr auto auto;
+        gap: 0.55rem;
+        padding: 0 0.75rem;
+    }
+
     .nav-links a {
         font-size: clamp(0.65rem, 2.6vw, 0.85rem);
         white-space: nowrap;
@@ -393,7 +399,7 @@ main {
     }
 
     .language-toggle {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .hero-content {
