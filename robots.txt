@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://redroomuppsala.se/sitemap.xml
