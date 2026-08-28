@@ -177,6 +177,16 @@ main {
 
 /* ---------- Karaoke schedule ---------- */
 
+.karaoke-info-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.karaoke-info-link:hover,
+.karaoke-info-link:focus-visible {
+    text-decoration: underline;
+}
+
 .karaoke-schedule {
     width: min(650px, 100%);
     margin: 0 auto;
