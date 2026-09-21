@@ -286,7 +286,7 @@ main {
 
 .opening-hours-section h2 {
     margin-bottom: 1.75rem;
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.25rem, 6.5vw, 4.25rem);
 }
 
 .opening-hours-list {
@@ -642,8 +642,9 @@ main {
 
 /* Instagram heading */
 
-.instagram-title {
-    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+.instagram-title,
+.gallery-title {
+    font-size: clamp(1.75rem, 5vw, 3rem) !important;
 }
 
 /* ---------- Small-phone hero title ---------- */
