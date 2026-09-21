@@ -540,6 +540,7 @@ main {
 .gallery-strip img {
     flex: 0 0 50%;
     width: 50%;
+    aspect-ratio: 4 / 3;
     height: auto;
 
     object-fit: contain;
@@ -638,29 +639,6 @@ main {
 }
 
 
-/* ---------- Homepage mobile layout ---------- */
-
-@media (max-width: 750px) {
-    .video-strip {
-        height: 220px;
-    }
-
-    .map-section {
-        height: 220px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .image-strip {
-        height: 220px;
-    }
-
-    .gallery-strip img {
-    flex-basis: 100%;
-}
 
 /* ---------- Footer Instagram icon ---------- */
 
