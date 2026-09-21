@@ -548,6 +548,86 @@ main {
     scroll-snap-align: start;
 }
 
+/* ---------- Gallery interaction ---------- */
+
+.gallery-strip img {
+    cursor: zoom-in;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .gallery-strip {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .gallery-strip img:hover {
+        transform: scale(1.035);
+        filter: brightness(1.08);
+        z-index: 2;
+    }
+}
+
+
+/* ---------- Gallery lightbox ---------- */
+
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    background: rgba(0, 0, 0, 0.94);
+    cursor: zoom-out;
+}
+
+.gallery-lightbox img {
+    width: auto;
+    height: auto;
+
+    max-width: 94vw;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    cursor: default;
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-size: 2rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.gallery-lightbox-open {
+    overflow: hidden;
+}
+
 /* ---------- Instagram section ---------- */
 
 .instagram-section {
