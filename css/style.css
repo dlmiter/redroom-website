@@ -668,7 +668,7 @@ main {
 
 .instagram-title,
 .gallery-title {
-    font-size: clamp(2rem, 6vw, 3.5rem) !important;
+    font-size: clamp(2.5rem, 7vw, 3.5rem) !important;
 }
 
 /* ---------- Small-phone hero title ---------- */
