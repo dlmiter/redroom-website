@@ -255,6 +255,9 @@ function renderStaticLanguage() {
     const instagramTitle =
         document.getElementById("instagram-title");
 
+    const galleryTitle =
+    document.getElementById("gallery-title");
+
     const footerHeadings =
         document.querySelectorAll(".footer-grid h2");
 
@@ -315,7 +318,11 @@ function renderStaticLanguage() {
         }
 
         if (instagramTitle) {
-            instagramTitle.textContent = "FOLLOW THE SINGERS";
+            instagramTitle.textContent = "FOLLOW THE TALENT";
+        }
+
+        if (galleryTitle) {
+            galleryTitle.textContent = "GALLERY";
         }
 
         if (footerHeadings[0]) {
