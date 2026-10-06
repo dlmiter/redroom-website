@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+    color: #ffdeab;
+
+    font-family: Arial, sans-serif;
+}
+
+.instagram-test {
+    width: min(900px, 92vw);
+    text-align: center;
+}
+
+.instagram-test h1 {
+    margin-bottom: 0.5rem;
+}
+
+.instagram-test p {
+    margin-bottom: 2rem;
+}
+
+.reel-preview {
+    width: min(420px, 100%);
+    aspect-ratio: 9 / 16;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333333;
+    background: #000000;
+
+    cursor: pointer;
+}
+
+.reel-preview span {
+    font-size: 1.25rem;
+}
