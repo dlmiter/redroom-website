@@ -1,0 +1,15 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "redroom-website",
+    "compatibility_date": "2026-10-06",
+
+    "observability": {
+        "enabled": true
+    },
+
+    "assets": {
+        "directory": "."
+    },
+
+    "previews": {}
+}
