@@ -4,21 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Instagram Viewer Test</title>
+    <title>Red room Reel Viewer</title>
 
     <link rel="stylesheet" href="instagram.css">
 </head>
 
 <body>
     <main class="instagram-test">
-        <h1>Instagram Viewer Test</h1>
-        <p>Red room — development only.</p>
 
-        <div class="reel-preview">
-            <span>REEL PREVIEW</span>
-        </div>
+        <section class="reel-module" aria-labelledby="reel-title">
+
+            <div class="reel-header">
+                <h1 id="reel-title">FÖLJ TALANGERNA</h1>
+
+                <a
+                    class="instagram-profile-link"
+                    href="https://www.instagram.com/redroom_uppsala/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+            </div>
+
+            <button
+                id="reel-preview"
+                class="reel-preview"
+                type="button"
+                aria-label="Spela senaste Reel från Red room"
+                disabled
+            >
+                <img
+                    id="reel-thumbnail"
+                    src=""
+                    alt="Senaste Reel från Red room"
+                >
+
+                <span class="reel-play" aria-hidden="true">▶</span>
+            </button>
+
+            <p id="reel-status" class="reel-status">
+                Laddar senaste Reel…
+            </p>
+
+        </section>
+
     </main>
 
-    <!-- Worker Preview build test -->
+    <div id="reel-viewer" class="reel-viewer" hidden>
+
+        <div class="reel-viewer-backdrop" data-close-reel></div>
+
+        <div
+            class="reel-viewer-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Red room Instagram Reel"
+        >
+            <button
+                id="reel-close"
+                class="reel-close"
+                type="button"
+                aria-label="Stäng"
+            >
+                ×
+            </button>
+
+            <video
+                id="reel-video"
+                controls
+                playsinline
+                preload="metadata"
+            ></video>
+
+            <a
+                id="reel-instagram-link"
+                class="reel-instagram-link"
+                href="https://www.instagram.com/redroom_uppsala/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+        </div>
+
+    </div>
+
+    <script src="instagram.js"></script>
 </body>
 </html>
