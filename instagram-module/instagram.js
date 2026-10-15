@@ -27,7 +27,6 @@ async function loadLatestReel() {
 
         thumbnail.src = currentReel.thumbnail;
         preview.disabled = false;
-
         status.hidden = true;
     } catch (error) {
         console.error(error);
