@@ -300,42 +300,30 @@
 
     <!-- Instagram -->
     <section
-        class="content-section instagram-section"
+        class="instagram-section"
         aria-labelledby="reel-title"
     >
-
-        <div class="reel-header">
-            <h2 id="reel-title">FÖLJ TALANGERNA</h2>
-
-            <a
-                class="instagram-profile-link"
-                href="https://www.instagram.com/redroom_uppsala/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Instagram
-            </a>
-        </div>
-
-        <button
-            id="reel-preview"
-            class="reel-preview"
-            type="button"
-            aria-label="Spela senaste Reel från Red room"
-            disabled
+        <a
+            class="instagram-logo-link"
+            href="https://www.instagram.com/redroom_uppsala/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Red room på Instagram"
         >
-            <img
-                id="reel-thumbnail"
-                alt="Senaste Reel från Red room"
-            >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
 
-            <span class="reel-play" aria-hidden="true">▶</span>
-        </button>
+        <h2 id="reel-title">FÖLJ TALANGERNA</h2>
+
+        <div
+            id="reel-strip"
+            class="reel-strip"
+            aria-label="Senaste Reels från Red room"
+        ></div>
 
         <p id="reel-status" class="reel-status">
-            Laddar senaste Reel…
+            Laddar senaste Reels…
         </p>
-
     </section>
 
     <div id="reel-viewer" class="reel-viewer" hidden>
