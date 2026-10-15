@@ -297,27 +297,86 @@
     </div>
 
 </section>
-        <!-- Instagram -->
-        <section
-            class="content-section instagram-section"
-            aria-labelledby="instagram-title"
-        >
 
-            <h2
-                id="instagram-title"
-                class="instagram-title"
+    <!-- Instagram -->
+    <section
+        class="content-section instagram-section"
+        aria-labelledby="reel-title"
+    >
+
+        <div class="reel-header">
+            <h2 id="reel-title">FÖLJ TALANGERNA</h2>
+
+            <a
+                class="instagram-profile-link"
+                href="https://www.instagram.com/redroom_uppsala/"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                FÖLJ TALANGERNA
-            </h2>
+                Instagram
+            </a>
+        </div>
 
-            <blockquote
-                class="instagram-media"
-                data-instgrm-permalink="https://www.instagram.com/reel/DZbA2jERhtV/"
-                data-instgrm-version="14"
-            ></blockquote>
+        <button
+            id="reel-preview"
+            class="reel-preview"
+            type="button"
+            aria-label="Spela senaste Reel från Red room"
+            disabled
+        >
+            <img
+                id="reel-thumbnail"
+                alt="Senaste Reel från Red room"
+            >
 
-        </section>
+            <span class="reel-play" aria-hidden="true">▶</span>
+        </button>
 
+        <p id="reel-status" class="reel-status">
+            Laddar senaste Reel…
+        </p>
+
+    </section>
+
+    <div id="reel-viewer" class="reel-viewer" hidden>
+
+        <div class="reel-viewer-backdrop" data-close-reel></div>
+
+        <div
+            class="reel-viewer-content"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Red room Instagram Reel"
+        >
+            <button
+                id="reel-close"
+                class="reel-close"
+                type="button"
+                aria-label="Stäng"
+            >
+                ×
+            </button>
+
+            <video
+                id="reel-video"
+                controls
+                playsinline
+                preload="metadata"
+            ></video>
+
+            <a
+                id="reel-instagram-link"
+                class="reel-instagram-link"
+                href="https://www.instagram.com/redroom_uppsala/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+        </div>
+
+    </div>
+        
         <!-- Venue image strip -->
         <section class="image-strip" aria-label="Red Room på Kungsgatan">
 
@@ -397,7 +456,7 @@
 
     </footer>
 
-    <script async src="https://www.instagram.com/embed.js"></script>
+    <script src="instagram-module/instagram.js"></script>
     <script src="js/script.js"></script>
 
 </body>
