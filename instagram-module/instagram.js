@@ -1,5 +1,4 @@
-const preview = document.getElementById("reel-preview");
-const thumbnail = document.getElementById("reel-thumbnail");
+const strip = document.getElementById("reel-strip");
 const status = document.getElementById("reel-status");
 
 const viewer = document.getElementById("reel-viewer");
@@ -9,7 +8,7 @@ const instagramLink = document.getElementById("reel-instagram-link");
 
 let currentReel = null;
 
-async function loadLatestReel() {
+async function loadReels() {
     try {
         const response = await fetch("/api/instagram");
 
@@ -23,25 +22,51 @@ async function loadLatestReel() {
             throw new Error("No Reels found");
         }
 
-        currentReel = data.reels[0];
+        const reels = data.reels.slice(0, 8);
 
-        thumbnail.src = currentReel.thumbnail;
-        preview.disabled = false;
+        strip.innerHTML = "";
+
+        reels.forEach((reel, index) => {
+            const button = document.createElement("button");
+
+            button.className = "reel-preview";
+            button.type = "button";
+            button.setAttribute(
+                "aria-label",
+                `Spela Reel ${index + 1} från Red room`
+            );
+
+            const image = document.createElement("img");
+            image.src = reel.thumbnail;
+            image.alt = "";
+            image.loading = "lazy";
+
+            const play = document.createElement("span");
+            play.className = "reel-play";
+            play.setAttribute("aria-hidden", "true");
+            play.textContent = "▶";
+
+            button.append(image, play);
+
+            button.addEventListener("click", () => {
+                openViewer(reel);
+            });
+
+            strip.appendChild(button);
+        });
+
         status.hidden = true;
     } catch (error) {
         console.error(error);
-
-        status.textContent = "Kunde inte ladda Reel.";
-        preview.disabled = true;
+        status.textContent = "Kunde inte ladda Reels.";
     }
 }
 
-function openViewer() {
-    if (!currentReel) {
-        return;
-    }
+function openViewer(reel) {
+    currentReel = reel;
 
-    video.src = currentReel.video;
+    video.src = reel.video;
+    instagramLink.href = reel.instagram;
 
     viewer.hidden = false;
     document.body.classList.add("reel-viewer-open");
@@ -56,9 +81,10 @@ function closeViewer() {
 
     viewer.hidden = true;
     document.body.classList.remove("reel-viewer-open");
+
+    currentReel = null;
 }
 
-preview.addEventListener("click", openViewer);
 closeButton.addEventListener("click", closeViewer);
 
 viewer.addEventListener("click", (event) => {
@@ -73,6 +99,4 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
-instagramLink.href = "https://www.instagram.com/redroom_uppsala/";
-
-loadLatestReel();
+loadReels();
