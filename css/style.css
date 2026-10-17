@@ -279,9 +279,9 @@ main {
 
 /* ---------- Bar opening hours ---------- */
 
-.opening-hours-section {
+.content-section.opening-hours-section {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
 }
 
 .opening-hours-section h2 {
@@ -508,13 +508,13 @@ main {
 
 .gallery-section {
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 0;
     text-align: center;
 }
 
 .gallery-title {
-    margin: 0 0 2rem;
-    padding: 0 1.25rem;
+    margin: 0;
+    padding: 3rem 1.25rem;
 
     line-height: 1;
     letter-spacing: 0.05em;
@@ -632,8 +632,7 @@ main {
 
 .instagram-section {
     width: 100%;
-
-    padding: 3rem 0 2rem;
+    padding: 0 0 2rem;
 
     overflow: hidden;
     text-align: center;
@@ -642,14 +641,13 @@ main {
 }
 
 .instagram-section h2 {
-    margin: 0 0 2rem;
-    padding: 0 1.25rem;
+    margin: 0;
+    padding: 3rem 1.25rem;
 
     font-size: clamp(1.65rem, 4vw, 2.4rem);
     line-height: 1;
     letter-spacing: 0.05em;
 }
-
 
 /* ---------- Reel carousel ---------- */
 
