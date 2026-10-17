@@ -652,8 +652,9 @@ main {
 /* ---------- Reel carousel ---------- */
 
 .reel-strip {
-    width: 100%;
+    width: min(630px, 100%);
     height: 280px;
+    margin: 0 auto;
 
     display: flex;
     gap: 0;
