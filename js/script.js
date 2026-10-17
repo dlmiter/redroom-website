@@ -253,7 +253,7 @@ function renderStaticLanguage() {
         document.getElementById("opening-hours-title");
 
     const instagramTitle =
-        document.getElementById("instagram-title");
+        document.getElementById("reel-title");
 
     const galleryTitle =
     document.getElementById("gallery-title");
@@ -281,6 +281,10 @@ function renderStaticLanguage() {
 
         if (instagramTitle) {
             instagramTitle.textContent = "FÖLJ TALANGERNA";
+        }
+
+        if (galleryTitle) {
+            galleryTitle.textContent = "GALLERI";
         }
 
         if (footerHeadings[0]) {
