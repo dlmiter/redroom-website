@@ -4,9 +4,17 @@ const status = document.getElementById("reel-status");
 const viewer = document.getElementById("reel-viewer");
 const video = document.getElementById("reel-video");
 const closeButton = document.getElementById("reel-close");
+const previousButton = document.getElementById("reel-prev");
+const nextButton = document.getElementById("reel-next");
 const instagramLink = document.getElementById("reel-instagram-link");
 
-let currentReel = null;
+let reels = [];
+let currentIndex = -1;
+
+let reelAutoScroll;
+let reelPaused = false;
+
+const desktopReels = window.matchMedia("(min-width: 751px)");
 
 async function loadReels() {
     try {
@@ -22,7 +30,7 @@ async function loadReels() {
             throw new Error("No Reels found");
         }
 
-        const reels = data.reels.slice(0, 8);
+        reels = data.reels.slice(0, 8);
 
         strip.innerHTML = "";
 
@@ -49,29 +57,90 @@ async function loadReels() {
             button.append(image, play);
 
             button.addEventListener("click", () => {
-                openViewer(reel);
+                openViewer(index);
             });
 
             strip.appendChild(button);
         });
 
         status.hidden = true;
+
+        startReelAutoScroll();
     } catch (error) {
         console.error(error);
-        status.textContent = "Kunde inte ladda Reels.";
+
+        status.textContent =
+            document.documentElement.lang === "en"
+                ? "Could not load Reels."
+                : "Kunde inte ladda Reels.";
     }
 }
 
-function openViewer(reel) {
-    currentReel = reel;
+function startReelAutoScroll() {
+    window.clearInterval(reelAutoScroll);
 
+    if (!desktopReels.matches || reels.length === 0) {
+        return;
+    }
+
+    reelAutoScroll = window.setInterval(() => {
+        if (reelPaused) {
+            return;
+        }
+
+        const firstReel = strip.querySelector(".reel-preview");
+
+        if (!firstReel) {
+            return;
+        }
+
+        const reelWidth =
+            firstReel.getBoundingClientRect().width;
+
+        const nearEnd =
+            strip.scrollLeft + strip.clientWidth >=
+            strip.scrollWidth - reelWidth / 2;
+
+        if (nearEnd) {
+            strip.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
+        } else {
+            strip.scrollBy({
+                left: reelWidth,
+                behavior: "smooth"
+            });
+        }
+    }, 5000);
+}
+
+function showReel(index) {
+    if (reels.length === 0) {
+        return;
+    }
+
+    currentIndex =
+        ((index % reels.length) + reels.length) %
+        reels.length;
+
+    const reel = reels[currentIndex];
+
+    video.pause();
     video.src = reel.video;
     instagramLink.href = reel.instagram;
+    video.load();
+
+    video.play().catch(() => {});
+}
+
+function openViewer(index) {
+    reelPaused = true;
 
     viewer.hidden = false;
     document.body.classList.add("reel-viewer-open");
 
-    video.play().catch(() => {});
+    showReel(index);
 }
 
 function closeViewer() {
@@ -82,9 +151,20 @@ function closeViewer() {
     viewer.hidden = true;
     document.body.classList.remove("reel-viewer-open");
 
-    currentReel = null;
+    currentIndex = -1;
+    reelPaused = false;
 }
 
+function previousReel() {
+    showReel(currentIndex - 1);
+}
+
+function nextReel() {
+    showReel(currentIndex + 1);
+}
+
+previousButton.addEventListener("click", previousReel);
+nextButton.addEventListener("click", nextReel);
 closeButton.addEventListener("click", closeViewer);
 
 viewer.addEventListener("click", (event) => {
@@ -94,9 +174,42 @@ viewer.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !viewer.hidden) {
+    if (viewer.hidden) {
+        return;
+    }
+
+    if (event.key === "Escape") {
         closeViewer();
     }
+
+    if (event.key === "ArrowLeft") {
+        previousReel();
+    }
+
+    if (event.key === "ArrowRight") {
+        nextReel();
+    }
 });
+
+strip.addEventListener("mouseenter", () => {
+    reelPaused = true;
+});
+
+strip.addEventListener("mouseleave", () => {
+    reelPaused = false;
+});
+
+strip.addEventListener("pointerdown", () => {
+    reelPaused = true;
+});
+
+strip.addEventListener("pointerup", () => {
+    reelPaused = false;
+});
+
+desktopReels.addEventListener(
+    "change",
+    startReelAutoScroll
+);
 
 loadReels();
