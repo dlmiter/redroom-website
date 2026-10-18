@@ -652,12 +652,12 @@ main {
 /* ---------- Reel carousel ---------- */
 
 .reel-strip {
-    width: min(630px, 100%);
+    width: min(694px, 100%);
     height: 280px;
     margin: 0 auto;
 
     display: flex;
-    gap: 0;
+    gap: 2rem;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -942,6 +942,10 @@ main {
         top: 0.75rem;
         right: 0.75rem;
     }
+
+    .reel-strip {
+    width: 100%;
+    gap: 0;
 }
 
 /* ---------- Map ---------- */
