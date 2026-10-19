@@ -944,9 +944,11 @@ main {
         right: 0.75rem;
     }
 
-    .reel-strip {
-    width: 100%;
-    gap: 0;
+        .reel-strip {
+        width: 100%;
+        padding: 0;
+        gap: 0;
+    }
 }
 
 /* ---------- Map ---------- */
