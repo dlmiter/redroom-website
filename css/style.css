@@ -652,13 +652,13 @@ main {
 /* ---------- Reel carousel ---------- */
 
 .reel-strip {
-    width: min(694px, 100%);
+    width: 694px;
+    max-width: 100%;
     height: 280px;
     margin: 0 auto;
-    padding: 0 2rem;
 
     display: flex;
-    gap: 0;
+    gap: 2rem;
 
     overflow-x: auto;
     overflow-y: hidden;
@@ -671,6 +671,34 @@ main {
 
 .reel-strip::-webkit-scrollbar {
     display: none;
+}
+
+/* 2 Reels */
+@media (min-width: 751px) and (max-width: 999px) {
+    .reel-strip {
+        width: 452px;
+    }
+}
+
+/* 3 Reels */
+@media (min-width: 1000px) and (max-width: 1399px) {
+    .reel-strip {
+        width: 694px;
+    }
+}
+
+/* 4 Reels */
+@media (min-width: 1400px) and (max-width: 1699px) {
+    .reel-strip {
+        width: 936px;
+    }
+}
+
+/* 5 Reels */
+@media (min-width: 1700px) {
+    .reel-strip {
+        width: 1178px;
+    }
 }
 
 .reel-preview {
