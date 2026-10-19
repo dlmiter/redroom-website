@@ -1101,3 +1101,38 @@ main {
         object-fit: contain;
     }
 }
+
+/* ---------- Compact mobile visuals ---------- */
+
+@media (max-width: 750px) {
+
+    /* Red hero area behind the Red room logo */
+    .hero-content {
+        min-height: 135px;
+        padding: 1.25rem 1rem;
+    }
+
+    /* Hero / banner video */
+    .video-strip {
+        height: 210px;
+    }
+
+    /* Venue image */
+    .image-strip {
+        height: 210px;
+    }
+
+    /* Instagram Reel strip */
+    .reel-strip {
+        height: 210px;
+    }
+
+    .reel-preview {
+        height: 210px;
+    }
+
+    /* Map */
+    .map-section {
+        height: 210px;
+    }
+}
