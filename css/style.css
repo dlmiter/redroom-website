@@ -514,7 +514,7 @@ main {
 
 .gallery-title {
     margin: 0;
-    padding: 3rem 1.25rem;
+    padding: 2.5rem 1.25rem;
 
     line-height: 1;
     letter-spacing: 0.05em;
@@ -1076,7 +1076,7 @@ main {
 /* Instagram heading */
 
 .gallery-title {
-    font-size: clamp(2.5rem, 7vw, 3.5rem) !important;
+    font-size: clamp(2.1rem, 5.5vw, 3rem) !important;
 }
 
 /* ---------- Small-phone hero title ---------- */
