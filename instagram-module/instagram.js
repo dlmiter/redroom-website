@@ -212,9 +212,11 @@ strip.addEventListener("pointerup", () => {
     reelPaused = false;
 });
 
-desktopReels.addEventListener(
-    "change",
-    startReelAutoScroll
-);
+if (desktopReels.addEventListener) {
+    desktopReels.addEventListener(
+        "change",
+        startReelAutoScroll
+    );
+}
 
 loadReels();
