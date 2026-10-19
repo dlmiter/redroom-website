@@ -97,9 +97,14 @@ function startReelAutoScroll() {
         const reelWidth =
             firstReel.getBoundingClientRect().width;
 
+        const reelGap =
+            parseFloat(getComputedStyle(strip).columnGap) || 0;
+
+        const reelStep = reelWidth + reelGap;
+
         const nearEnd =
             strip.scrollLeft + strip.clientWidth >=
-            strip.scrollWidth - reelWidth / 2;
+            strip.scrollWidth - reelStep / 2;
 
         if (nearEnd) {
             strip.scrollTo({
@@ -108,7 +113,7 @@ function startReelAutoScroll() {
             });
         } else {
             strip.scrollBy({
-                left: reelWidth,
+                left: reelStep,
                 behavior: "smooth"
             });
         }
