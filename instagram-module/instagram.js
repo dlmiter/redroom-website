@@ -14,7 +14,7 @@ let currentIndex = -1;
 let reelAutoScroll;
 let reelPaused = false;
 
-const desktop = window.matchMedia("(min-width: 751px)");
+const desktopReels = window.matchMedia("(min-width: 751px)");
 
 async function loadReels() {
     try {
