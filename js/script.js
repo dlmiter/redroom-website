@@ -256,10 +256,16 @@ function renderStaticLanguage() {
         document.getElementById("reel-title");
 
     const galleryTitle =
-    document.getElementById("gallery-title");
+        document.getElementById("gallery-title");
 
-    const footerHeadings =
-        document.querySelectorAll(".footer-grid h2");
+    const footerContactTitle =
+        document.getElementById("footer-contact-title");
+
+    const footerFaqLink =
+        document.getElementById("footer-faq-link");
+
+    const footerFollowTitle =
+        document.getElementById("footer-follow-title");
 
     const privacyLink =
         document.querySelector(".footer-bottom a");
@@ -287,12 +293,16 @@ function renderStaticLanguage() {
             galleryTitle.textContent = "GALLERI";
         }
 
-        if (footerHeadings[0]) {
-            footerHeadings[0].textContent = "KONTAKT";
+        if (footerContactTitle) {
+            footerContactTitle.textContent = "KONTAKT";
         }
 
-        if (footerHeadings[1]) {
-            footerHeadings[1].textContent = "FÖLJ OSS";
+        if (footerFaqLink) {
+            footerFaqLink.textContent = "VANLIGA FRÅGOR";
+        }
+
+        if (footerFollowTitle) {
+            footerFollowTitle.textContent = "FÖLJ OSS";
         }
 
         if (privacyLink) {
@@ -329,12 +339,16 @@ function renderStaticLanguage() {
             galleryTitle.textContent = "GALLERY";
         }
 
-        if (footerHeadings[0]) {
-            footerHeadings[0].textContent = "CONTACT";
+        if (footerContactTitle) {
+            footerContactTitle.textContent = "CONTACT";
         }
 
-        if (footerHeadings[1]) {
-            footerHeadings[1].textContent = "FOLLOW US";
+        if (footerFaqLink) {
+            footerFaqLink.textContent = "FAQ";
+        }
+
+        if (footerFollowTitle) {
+            footerFollowTitle.textContent = "FOLLOW US";
         }
 
         if (privacyLink) {
