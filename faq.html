@@ -19,11 +19,12 @@
 
     <header class="faq-header">
 
-        <a class="faq-back" href="index.html">
-            ← TILLBAKA
-        </a>
-
-        <h1>VANLIGA FRÅGOR</h1>
+        <h1
+            data-sv="VANLIGA FRÅGOR"
+            data-en="FAQ"
+        >
+            VANLIGA FRÅGOR
+        </h1>
 
     </header>
 
@@ -32,34 +33,62 @@
         <div class="faq-list">
 
             <details>
-                <summary>
+                <summary
+                    data-sv="Hur mycket kostar det att sjunga karaoke?"
+                    data-en="How much does it cost to sing karaoke?"
+                >
                     Hur mycket kostar det att sjunga karaoke?
                 </summary>
 
-                <p>
+                <p
+                    data-sv="Det kostar ingenting att sjunga karaoke hos oss."
+                    data-en="There is no charge to sing karaoke with us."
+                >
                     Det kostar ingenting att sjunga karaoke hos oss.
                 </p>
             </details>
 
             <details>
-                <summary>
+                <summary
+                    data-sv="Kan man reservera bord hos er?"
+                    data-en="Can I reserve a table?"
+                >
                     Kan man reservera bord hos er?
                 </summary>
 
                 <p>
-                    Ja, det går bra att reservera bord eller plats i förväg.
-                    Ring oss gärna på
-                    <a href="tel:+46707206575">070 720 65 75</a>,
-                    så hjälper vi dig.
+                    <span
+                        data-sv="Ja, det går bra att reservera bord eller plats i förväg. Ring oss gärna på "
+                        data-en="Yes, you can reserve a table or space in advance. Feel free to call us on "
+                    >
+                        Ja, det går bra att reservera bord eller plats i förväg. Ring oss gärna på
+                    </span>
+
+                    <a href="tel:+46707206575">
+                        070 720 65 75
+                    </a>
+
+                    <span
+                        data-sv=", så hjälper vi dig."
+                        data-en=", and we'll be happy to help."
+                    >
+                        , så hjälper vi dig.
+                    </span>
                 </p>
             </details>
 
             <details>
-                <summary>
+                <summary
+                    data-sv="Har ni åldersgräns?"
+                    data-en="Do you have an age limit?"
+                >
                     Har ni åldersgräns?
                 </summary>
 
-                <p>
+                <p
+                    data-sv="Ja. För närvarande har vi 18-årsgräns."
+                    data-en="Yes. Our current age limit is 18."
+                >
                     Ja. För närvarande har vi 18-årsgräns.
                 </p>
             </details>
@@ -67,6 +96,35 @@
         </div>
 
     </main>
+
+    <script>
+        const savedLanguage =
+            localStorage.getItem("redroom-language") || "sv";
+
+        document.documentElement.lang = savedLanguage;
+
+        document
+            .querySelectorAll("[data-sv][data-en]")
+            .forEach((element) => {
+                element.textContent =
+                    element.dataset[savedLanguage];
+            });
+
+        if (savedLanguage === "en") {
+            document.title =
+                "FAQ | Red room Uppsala";
+
+            const description =
+                document.querySelector('meta[name="description"]');
+
+            if (description) {
+                description.setAttribute(
+                    "content",
+                    "Frequently asked questions about karaoke, reservations and the age limit at Red room in Uppsala."
+                );
+            }
+        }
+    </script>
 
 </body>
 
