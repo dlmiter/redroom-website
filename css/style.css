@@ -1005,7 +1005,7 @@ main {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 3rem;
 }
 
@@ -1071,6 +1071,37 @@ main {
 
 .instagram-icon:hover .fa-instagram {
     transform: scale(1.1);
+}
+
+/* ---------- Footer FAQ ---------- */
+
+.footer-faq {
+    text-align: center !important;
+}
+
+.footer-social {
+    text-align: center !important;
+}
+
+.footer-faq-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-faq-link:hover,
+.footer-faq-link:focus-visible {
+    text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-grid section {
+        text-align: center;
+    }
 }
 
 /* Instagram heading */
