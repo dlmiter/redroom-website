@@ -2,7 +2,8 @@ const openingHoursList = document.getElementById("opening-hours-list");
 const karaokeSchedule = document.getElementById("karaoke-schedule");
 const languageToggle = document.getElementById("language-toggle");
 
-let currentLanguage = "sv";
+let currentLanguage =
+    localStorage.getItem("redroom-language") || "sv";
 
 const dayNames = {
     sv: [
@@ -377,6 +378,11 @@ if (languageToggle) {
             currentLanguage === "sv"
                 ? "en"
                 : "sv";
+
+        localStorage.setItem(
+            "redroom-language",
+            currentLanguage
+        );
 
         renderEverything();
     });
