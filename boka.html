@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Boka Red room | Privatbokning i Uppsala</title>
+
+    <meta
+        name="description"
+        content="Boka Red room privat i Uppsala. Hyr hela lokalen för större sällskap eller boka privat karaoke söndag till tisdag."
+    >
+
+    <link
+        rel="canonical"
+        href="https://redroomuppsala.se/boka.html"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="faq-header">
+
+        <h1
+            data-sv="BOKA RED ROOM"
+            data-en="PRIVATE BOOKINGS"
+        >
+            BOKA RED ROOM
+        </h1>
+
+    </header>
+
+    <main class="faq-page booking-page">
+
+        <p
+            class="booking-intro"
+            data-sv="Vill ni ha Red room för er själva? Vi erbjuder privata bokningar för både större sällskap och privata karaokekvällar."
+            data-en="Want Red room to yourselves? We offer private bookings for larger groups as well as private karaoke nights."
+        >
+            Vill ni ha Red room för er själva? Vi erbjuder privata
+            bokningar för både större sällskap och privata karaokekvällar.
+        </p>
+
+        <div class="faq-list booking-list">
+
+            <!-- Entire venue -->
+            <details>
+
+                <summary
+                    data-sv="HYR HELA RED ROOM"
+                    data-en="PRIVATE VENUE HIRE"
+                >
+                    HYR HELA RED ROOM
+                </summary>
+
+                <p
+                    data-sv="För sällskap på 20 personer eller fler kan hela Red room bokas privat. Detta kan arrangeras alla dagar i veckan, beroende på tillgänglighet."
+                    data-en="For groups of 20 or more, the entire Red room can be booked privately. This can be arranged any day of the week, subject to availability."
+                >
+                    För sällskap på 20 personer eller fler kan hela
+                    Red room bokas privat. Detta kan arrangeras alla
+                    dagar i veckan, beroende på tillgänglighet.
+                </p>
+
+                <p
+                    data-sv="Upplägg och pris anpassas efter bokningen. Kontakta oss så tar vi fram en personlig offert."
+                    data-en="The setup and price are tailored to each booking. Contact us and we'll provide a personal quote."
+                >
+                    Upplägg och pris anpassas efter bokningen.
+                    Kontakta oss så tar vi fram en personlig offert.
+                </p>
+
+                <p class="booking-contact">
+
+                    <a href="mailto:redroomuppsala@gmail.com">
+                        redroomuppsala@gmail.com
+                    </a>
+
+                    <br>
+
+                    <a href="tel:+46707206575">
+                        070 720 65 75
+                    </a>
+
+                </p>
+
+            </details>
+
+
+            <!-- Private karaoke -->
+            <details>
+
+                <summary
+                    data-sv="PRIVAT KARAOKE – SÖNDAG TILL TISDAG"
+                    data-en="PRIVATE KARAOKE – SUNDAY TO TUESDAY"
+                >
+                    PRIVAT KARAOKE – SÖNDAG TILL TISDAG
+                </summary>
+
+                <p
+                    data-sv="För sällskap på 10 personer eller fler kan vi arrangera privat karaoke söndag till tisdag, utanför våra ordinarie karaokekvällar."
+                    data-en="For groups of 10 or more, we can arrange private karaoke from Sunday to Tuesday, outside our regular karaoke nights."
+                >
+                    För sällskap på 10 personer eller fler kan vi
+                    arrangera privat karaoke söndag till tisdag,
+                    utanför våra ordinarie karaokekvällar.
+                </p>
+
+                <p>
+                    <span
+                        data-sv="Skicka ett mejl med önskat datum och antal personer, så återkommer vi om tillgänglighet."
+                        data-en="Email us with your preferred date and group size, and we'll get back to you regarding availability."
+                    >
+                        Skicka ett mejl med önskat datum och antal
+                        personer, så återkommer vi om tillgänglighet.
+                    </span>
+                </p>
+
+                <p>
+                    <a
+                        class="booking-email"
+                        href="mailto:redroomuppsala@gmail.com"
+                    >
+                        redroomuppsala@gmail.com
+                    </a>
+                </p>
+
+            </details>
+
+        </div>
+
+    </main>
+
+    <script>
+        const savedLanguage =
+            localStorage.getItem("redroom-language") || "sv";
+
+        const currentLanguage =
+            savedLanguage === "en" ? "en" : "sv";
+
+        document.documentElement.lang = currentLanguage;
+
+        document
+            .querySelectorAll("[data-sv][data-en]")
+            .forEach((element) => {
+                element.textContent =
+                    element.dataset[currentLanguage];
+            });
+
+        const description =
+            document.querySelector('meta[name="description"]');
+
+        if (currentLanguage === "en") {
+
+            document.title =
+                "Private bookings | Red room Uppsala";
+
+            if (description) {
+                description.setAttribute(
+                    "content",
+                    "Book Red room privately in Uppsala. Hire the entire venue for larger groups or arrange private karaoke Sunday to Tuesday."
+                );
+            }
+
+        } else {
+
+            document.title =
+                "Boka Red room | Privatbokning i Uppsala";
+
+            if (description) {
+                description.setAttribute(
+                    "content",
+                    "Boka Red room privat i Uppsala. Hyr hela lokalen för större sällskap eller boka privat karaoke söndag till tisdag."
+                );
+            }
+        }
+    </script>
+
+</body>
+
+</html>
