@@ -116,8 +116,9 @@ function renderOpeningHours() {
         closingHours[dayIndex];
 
     const currentTime =
-        `19 – 0${currentClosingHour}`;
-
+        currentLanguage === "sv"
+            ? `19 – 0${currentClosingHour}`
+            : `7 PM – ${currentClosingHour} AM`;
     const firstSummary =
         currentLanguage === "sv"
             ? "SÖNDAG – TORSDAG"
