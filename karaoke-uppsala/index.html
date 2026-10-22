@@ -17,39 +17,29 @@
         href="https://redroomuppsala.se/karaoke-uppsala/"
     >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Besley:wght@700;800;900&display=swap"
-        rel="stylesheet"
-    >
-
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
         .seo-page {
             width: min(760px, 100%);
-            margin: 0 auto;
-            padding: 4rem 1.25rem;
-        }
-
-        .seo-page h1 {
-            margin: 0 0 2rem;
-            color: #ffdeab;
-            font-family: "Besley", serif;
-            font-size: clamp(2.8rem, 8vw, 5rem);
-            line-height: 1;
         }
 
         .seo-page h2 {
             margin: 3rem 0 1rem;
+
+            color: #ffffff;
+
             font-size: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1.2;
         }
 
         .seo-page p {
             margin: 0 0 1.25rem;
+
+            color: #dddddd;
+
             font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         .seo-page strong {
@@ -58,83 +48,50 @@
 
         .seo-home-link {
             display: inline-block;
+
             margin-top: 2rem;
+
+            color: #ffdeab;
+
             font-weight: 700;
+            text-decoration: none;
+        }
+
+        .seo-home-link:hover,
+        .seo-home-link:focus-visible {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 750px) {
+            .seo-page h2 {
+                margin-top: 2.25rem;
+            }
+
+            .seo-page p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header class="site-header">
+    <header class="faq-header">
 
-        <nav class="navbar" aria-label="Huvudmeny">
-
-            <ul class="nav-links">
-
-                <li>
-                    <a
-                        href="../"
-                        data-sv="HEM"
-                        data-en="HOME"
-                    >
-                        HEM
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../#karaoke">
-                        KARAOKE
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="../#oppettider"
-                        data-sv="ÖPPETTIDER"
-                        data-en="OPENING HOURS"
-                    >
-                        ÖPPETTIDER
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="../#kontakt"
-                        data-sv="KONTAKT"
-                        data-en="CONTACT"
-                    >
-                        KONTAKT
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="https://www.instagram.com/redroom_uppsala/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        INSTAGRAM
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
+        <h1
+            data-sv="KARAOKE I UPPSALA"
+            data-en="KARAOKE IN UPPSALA"
+        >
+            KARAOKE I UPPSALA
+        </h1>
 
     </header>
 
-    <main class="seo-page">
-
-        <h1
-            data-sv="Karaoke i Uppsala"
-            data-en="Karaoke in Uppsala"
-        >
-            Karaoke i Uppsala
-        </h1>
+    <main class="faq-page seo-page">
 
         <p>
             <strong>Red room</strong>
+
             <span
                 data-sv=" är en karaokebar i centrala Uppsala med open mic-karaoke onsdag till lördag på Kungsgatan 41. Här möts både vana karaoketalanger och personer som står vid mikrofonen för första gången."
                 data-en=" is a karaoke bar in central Uppsala with open mic karaoke from Wednesday to Saturday at Kungsgatan 41. Both experienced karaoke singers and first-time performers are welcome."
@@ -156,10 +113,10 @@
         </p>
 
         <h2
-            data-sv="Open mic-karaoke med KJ"
-            data-en="Open mic karaoke with a KJ"
+            data-sv="OPEN MIC-KARAOKE MED KJ"
+            data-en="OPEN MIC KARAOKE WITH A KJ"
         >
-            Open mic-karaoke med KJ
+            OPEN MIC-KARAOKE MED KJ
         </h2>
 
         <p
@@ -172,10 +129,10 @@
         </p>
 
         <h2
-            data-sv="När är det karaoke?"
-            data-en="When is karaoke?"
+            data-sv="NÄR ÄR DET KARAOKE?"
+            data-en="WHEN IS KARAOKE?"
         >
-            När är det karaoke?
+            NÄR ÄR DET KARAOKE?
         </h2>
 
         <p>
@@ -211,10 +168,10 @@
         </p>
 
         <h2
-            data-sv="Mer än karaoke"
-            data-en="More than karaoke"
+            data-sv="MER ÄN KARAOKE"
+            data-en="MORE THAN KARAOKE"
         >
-            Mer än karaoke
+            MER ÄN KARAOKE
         </h2>
 
         <p
@@ -227,10 +184,10 @@
         </p>
 
         <h2
-            data-sv="Hitta hit"
-            data-en="Find us"
+            data-sv="HITTA HIT"
+            data-en="FIND US"
         >
-            Hitta hit
+            HITTA HIT
         </h2>
 
         <p>
@@ -282,6 +239,7 @@
             document.querySelector('meta[name="description"]');
 
         if (currentLanguage === "en") {
+
             document.title =
                 "Karaoke in Uppsala | Red room";
 
@@ -292,13 +250,8 @@
                 );
             }
 
-            document
-                .querySelector("nav")
-                .setAttribute(
-                    "aria-label",
-                    "Main navigation"
-                );
         } else {
+
             document.title =
                 "Karaoke i Uppsala | Red room";
 
