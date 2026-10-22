@@ -1073,7 +1073,7 @@ main {
     transform: scale(1.1);
 }
 
-/* ---------- Footer FAQ ---------- */
+/* ---------- Footer booking / FAQ ---------- */
 
 .footer-faq {
     text-align: center !important;
@@ -1083,8 +1083,34 @@ main {
     text-align: center !important;
 }
 
+.footer-booking-link {
+    display: inline-block;
+
+    color: #ffdeab !important;
+
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+}
+
+.footer-booking-link:hover,
+.footer-booking-link:focus-visible {
+    text-decoration: underline;
+}
+
 .footer-faq-link {
-    color: #ffffff;
+    display: block;
+
+    margin-top: 0.9rem;
+
+    color: #ffffff !important;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+
     text-decoration: none;
 }
 
