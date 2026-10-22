@@ -119,6 +119,7 @@ function renderOpeningHours() {
         currentLanguage === "sv"
             ? `19 – 0${currentClosingHour}`
             : `7 PM – ${currentClosingHour} AM`;
+
     const firstSummary =
         currentLanguage === "sv"
             ? "SÖNDAG – TORSDAG"
@@ -128,6 +129,16 @@ function renderOpeningHours() {
         currentLanguage === "sv"
             ? "FREDAG – LÖRDAG"
             : "FRIDAY – SATURDAY";
+
+    const firstSummaryTime =
+        currentLanguage === "sv"
+            ? "19 – 02"
+            : "7 PM – 2 AM";
+
+    const secondSummaryTime =
+        currentLanguage === "sv"
+            ? "19 – 03"
+            : "7 PM – 3 AM";
 
     openingHoursList.innerHTML = `
         <div class="hours-row is-today">
@@ -141,12 +152,12 @@ function renderOpeningHours() {
 
         <div class="hours-row hours-summary-row">
             <span class="hours-day">${firstSummary}</span>
-            <span class="hours-time">19 – 02</span>
+            <span class="hours-time">${firstSummaryTime}</span>
         </div>
 
         <div class="hours-row hours-summary-row">
             <span class="hours-day">${secondSummary}</span>
-            <span class="hours-time">19 – 03</span>
+            <span class="hours-time">${secondSummaryTime}</span>
         </div>
     `;
 }
