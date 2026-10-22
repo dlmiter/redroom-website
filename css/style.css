@@ -1300,3 +1300,35 @@ main {
         padding: 0 2.5rem 1.25rem 0;
     }
 }
+
+/* ---------- Private bookings ---------- */
+
+.booking-intro {
+    max-width: 650px;
+    margin: 0 auto 2.5rem;
+
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.booking-list summary {
+    color: #ffffff;
+}
+
+.booking-contact,
+.booking-list .booking-contact {
+    margin-top: 0.25rem;
+}
+
+.booking-contact a,
+.booking-email {
+    color: #ffdeab !important;
+    font-weight: 800;
+}
+
+@media (max-width: 750px) {
+    .booking-intro {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+    }
+}
