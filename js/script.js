@@ -262,12 +262,15 @@ function renderStaticLanguage() {
     const footerContactTitle =
         document.getElementById("footer-contact-title");
 
+    const footerBookingLink =
+        document.getElementById("footer-booking-link");
+
     const footerFaqLink =
         document.getElementById("footer-faq-link");
 
     const footerFollowTitle =
         document.getElementById("footer-follow-title");
-
+    
     const privacyLink =
         document.querySelector(".footer-bottom a");
 
@@ -298,10 +301,14 @@ function renderStaticLanguage() {
             footerContactTitle.textContent = "KONTAKT";
         }
 
+        if (footerBookingLink) {
+            footerBookingLink.textContent = "BOKA OSS";
+        }
+
         if (footerFaqLink) {
             footerFaqLink.textContent = "VANLIGA FRÅGOR";
         }
-
+        
         if (footerFollowTitle) {
             footerFollowTitle.textContent = "FÖLJ OSS";
         }
@@ -342,6 +349,10 @@ function renderStaticLanguage() {
 
         if (footerContactTitle) {
             footerContactTitle.textContent = "CONTACT";
+        }
+
+        if (footerBookingLink) {
+            footerBookingLink.textContent = "PRIVATE BOOKINGS";
         }
 
         if (footerFaqLink) {
