@@ -220,8 +220,15 @@ function renderKaraokeSchedule() {
     const displayedDay =
         dayNames[currentLanguage][displayedDayIndex];
 
-    const displayedStart =
+    const displayedStartHour =
         karaokeStartHours[displayedDayIndex];
+
+    const displayedStart =
+        currentLanguage === "sv"
+            ? displayedStartHour
+            : displayedStartHour === 21
+                ? "9 PM"
+                : "10 PM";
 
     const firstSummary =
         currentLanguage === "sv"
@@ -232,6 +239,16 @@ function renderKaraokeSchedule() {
         currentLanguage === "sv"
             ? "FREDAG – LÖRDAG"
             : "FRIDAY – SATURDAY";
+
+    const firstSummaryTime =
+        currentLanguage === "sv"
+            ? "21"
+            : "9 PM";
+
+    const secondSummaryTime =
+        currentLanguage === "sv"
+            ? "22"
+            : "10 PM";
 
     karaokeSchedule.innerHTML = `
         <div class="karaoke-row is-current">
@@ -245,12 +262,12 @@ function renderKaraokeSchedule() {
 
         <div class="karaoke-row karaoke-summary-row">
             <span class="karaoke-day">${firstSummary}</span>
-            <span class="karaoke-time">21</span>
+            <span class="karaoke-time">${firstSummaryTime}</span>
         </div>
 
         <div class="karaoke-row karaoke-summary-row">
             <span class="karaoke-day">${secondSummary}</span>
-            <span class="karaoke-time">22</span>
+            <span class="karaoke-time">${secondSummaryTime}</span>
         </div>
     `;
 }
