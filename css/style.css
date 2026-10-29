@@ -939,7 +939,7 @@ main {
         flex: 0 0 210px;
         width: 210px;
         height: 280px;
-        border-right: 6px solid #000000;
+        border-right: 18px solid #000000;
     }
 
     .reel-viewer {
