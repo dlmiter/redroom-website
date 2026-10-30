@@ -316,7 +316,7 @@ main {
 }
 
 .hours-open {
-    color: #c1121f;
+    color: #12c1b4;
     font-size: clamp(1.5rem, 4.5vw, 2.2rem);
     font-weight: 900;
     letter-spacing: 0.04em;
