@@ -1309,7 +1309,8 @@ main {
 
     .faq-header h1 {
         margin: 0;
-        font-size: 2.25rem;
+        font-size: clamp(1.65rem, 8vw, 2.25rem);
+        white-space: nowrap;
     }
 
     .faq-page {
