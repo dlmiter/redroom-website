@@ -117,7 +117,7 @@ function renderOpeningHours() {
 
     const currentTime =
         currentLanguage === "sv"
-            ? `19 – 0${currentClosingHour}`
+            ? `19 – ${currentClosingHour}`
             : `7 PM – ${currentClosingHour} AM`;
 
     const firstSummary =
@@ -132,12 +132,12 @@ function renderOpeningHours() {
 
     const firstSummaryTime =
         currentLanguage === "sv"
-            ? "19 – 02"
+            ? "19 – 2"
             : "7 PM – 2 AM";
 
     const secondSummaryTime =
         currentLanguage === "sv"
-            ? "19 – 03"
+            ? "19 – 3"
             : "7 PM – 3 AM";
 
     openingHoursList.innerHTML = `
