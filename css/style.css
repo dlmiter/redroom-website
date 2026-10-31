@@ -214,14 +214,20 @@ main {
 }
 
 .karaoke-status {
-    color: #c1121f;
     font-size: clamp(1.5rem, 4.5vw, 2.2rem);
     font-weight: 900;
     letter-spacing: 0.04em;
-
-    animation: opening-status-dim 3.5s ease-in-out infinite;
 }
 
+.karaoke-status.is-starting {
+    color: #c1121f;
+    animation: opening-status-dim 1.75s ease-in-out infinite;
+}
+
+.karaoke-status.is-live {
+    color: #20d34a;
+    animation: none;
+}
 .karaoke-day {
     text-align: left;
     font-size: clamp(1.05rem, 3vw, 1.45rem);
@@ -316,15 +322,22 @@ main {
 }
 
 .hours-open {
-    color: #20d34a;
     font-size: clamp(1.5rem, 4.5vw, 2.2rem);
     font-weight: 900;
     letter-spacing: 0.04em;
 
     text-align: right;
     white-space: nowrap;
+}
 
-    animation: opening-status-dim 3.5s ease-in-out infinite;
+.hours-open.is-opening {
+    color: #c1121f;
+    animation: opening-status-dim 1.75s ease-in-out infinite;
+}
+
+.hours-open.is-open {
+    color: #20d34a;
+    animation: none;
 }
 
 @keyframes opening-status-dim {
