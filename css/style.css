@@ -1063,13 +1063,21 @@ main {
 
 
 
-/* ---------- Footer Instagram icon ---------- */
+/* ---------- Footer social icons ---------- */
 
 .footer-grid section:last-child {
     text-align: center;
 }
 
-.instagram-icon {
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.instagram-icon,
+.facebook-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1083,7 +1091,13 @@ main {
     transition: transform 0.2s ease;
 }
 
-.instagram-icon:hover .fa-instagram {
+.facebook-icon .fa-facebook-f {
+    font-size: 2.35rem;
+    transition: transform 0.2s ease;
+}
+
+.instagram-icon:hover .fa-instagram,
+.facebook-icon:hover .fa-facebook-f {
     transform: scale(1.1);
 }
 
