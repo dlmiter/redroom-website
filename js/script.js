@@ -143,9 +143,9 @@ function renderOpeningHours() {
     openingHoursList.innerHTML = `
         <div class="hours-row is-today">
             <div class="hours-current-day">
-                <span class="hours-open">${statusText}</span>
+                <span class="hours-open ${isOpen ? "is-open" : "is-opening"}">${statusText}</span>
                 <span class="hours-day">${currentDay}</span>
-            </div>
+        </div>
 
             <span class="hours-time">${currentTime}</span>
         </div>
@@ -214,8 +214,8 @@ function renderKaraokeSchedule() {
 
     const statusText =
         currentLanguage === "sv"
-            ? (isLive ? "LIVE" : "BÖRJAR")
-            : (isLive ? "LIVE" : "STARTS");
+            ? (isLive ? "IGÅNG (NU)" : "BÖRJAR")
+            : (isLive ? "ON NOW" : "STARTS");
 
     const displayedDay =
         dayNames[currentLanguage][displayedDayIndex];
@@ -253,9 +253,9 @@ function renderKaraokeSchedule() {
     karaokeSchedule.innerHTML = `
         <div class="karaoke-row is-current">
             <div class="karaoke-current-day">
-                <span class="karaoke-status">${statusText}</span>
+                <span class="karaoke-status ${isLive ? "is-live" : "is-starting"}">${statusText}</span>
                 <span class="karaoke-day">${displayedDay}</span>
-            </div>
+        </div>
 
             <span class="karaoke-time">${displayedStart}</span>
         </div>
