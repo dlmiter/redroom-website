@@ -1121,13 +1121,29 @@ main {
 }
 
 @media (max-width: 750px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+    .site-footer {
+        padding: 2.5rem 1.5rem 1.5rem;
     }
 
-    .footer-grid section {
-        text-align: center;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .footer-grid section,
+    .footer-grid section:last-child,
+    .footer-faq,
+    .footer-social {
+        text-align: left !important;
+    }
+
+    .footer-grid h2 {
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        text-align: left;
     }
 }
 
