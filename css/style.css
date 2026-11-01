@@ -60,7 +60,7 @@ iframe {
     list-style: none;
 
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
 }
 
@@ -432,7 +432,7 @@ main {
     }
 
     .nav-links {
-        grid-template-columns: 1fr 1.55fr 1fr auto auto;
+        grid-template-columns: 1fr 1.55fr 1fr auto;
         gap: 0.55rem;
         padding: 0 0.75rem;
     }
