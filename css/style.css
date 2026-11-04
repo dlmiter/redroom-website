@@ -1412,6 +1412,11 @@ main {
     line-height: 1.4;
 }
 
+.booking-intro .booking-lead {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
 .booking-header h1 {
     color: #ffdeab;
 }
