@@ -1403,6 +1403,10 @@ main {
 
 /* ---------- Private bookings ---------- */
 
+.booking-header h1 {
+    color: #ffdeab;
+}
+
 .booking-intro {
     max-width: 650px;
     margin: 0 auto 2.5rem;
