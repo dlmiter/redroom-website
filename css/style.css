@@ -1403,6 +1403,15 @@ main {
 
 /* ---------- Private bookings ---------- */
 
+.booking-lead {
+    display: block;
+    margin-bottom: 0.35rem;
+
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
 .booking-header h1 {
     color: #ffdeab;
 }
