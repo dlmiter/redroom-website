@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
         <loc>https://redroomuppsala.se/</loc>
     </url>
 
     <url>
-        <loc>https://redroomuppsala.se/integritet.html</loc>
+        <loc>https://redroomuppsala.se/karaoke-uppsala/</loc>
     </url>
 
     <url>
-        <loc>https://redroomuppsala.se/karaoke-uppsala/</loc>
+        <loc>https://redroomuppsala.se/boka</loc>
     </url>
+
+    <url>
+        <loc>https://redroomuppsala.se/faq</loc>
+    </url>
+
+    <url>
+        <loc>https://redroomuppsala.se/integritet</loc>
+    </url>
+
 </urlset>
