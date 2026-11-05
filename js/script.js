@@ -327,10 +327,6 @@ function renderStaticLanguage() {
             footerContactTitle.textContent = "KONTAKT";
         }
 
-        if (footerBookingLink) {
-            footerBookingLink.textContent = "BOKA OSS";
-        }
-
         if (footerFaqLink) {
             footerFaqLink.textContent = "VANLIGA FRÅGOR";
         }
@@ -375,10 +371,6 @@ function renderStaticLanguage() {
 
         if (footerContactTitle) {
             footerContactTitle.textContent = "CONTACT";
-        }
-
-        if (footerBookingLink) {
-            footerBookingLink.textContent = "PRIVATE BOOKINGS";
         }
 
         if (footerFaqLink) {
