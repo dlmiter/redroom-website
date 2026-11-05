@@ -273,11 +273,11 @@ function renderKaraokeSchedule() {
 }
 
 function renderStaticLanguage() {
-    const openingLink =
-        document.querySelector('a[href="#oppettider"]');
+    const karaokeNavLink =
+        document.getElementById("nav-karaoke-link");
 
-    const contactLink =
-        document.querySelector('a[href="#kontakt"]');
+    const bookingNavLink =
+        document.getElementById("nav-booking-link");
 
     const openingTitle =
         document.getElementById("opening-hours-title");
@@ -291,9 +291,6 @@ function renderStaticLanguage() {
     const footerContactTitle =
         document.getElementById("footer-contact-title");
 
-    const footerBookingLink =
-        document.getElementById("footer-booking-link");
-
     const footerFaqLink =
         document.getElementById("footer-faq-link");
 
@@ -306,12 +303,12 @@ function renderStaticLanguage() {
     if (currentLanguage === "sv") {
         document.documentElement.lang = "sv";
 
-        if (openingLink) {
-            openingLink.textContent = "ÖPPETTIDER";
+        if (karaokeNavLink) {
+            karaokeNavLink.textContent = "KARAOKE";
         }
 
-        if (contactLink) {
-            contactLink.textContent = "KONTAKT";
+        if (bookingNavLink) {
+            bookingNavLink.textContent = "BOKA";
         }
 
         if (openingTitle) {
@@ -356,12 +353,12 @@ function renderStaticLanguage() {
     } else {
         document.documentElement.lang = "en";
 
-        if (openingLink) {
-            openingLink.textContent = "OPENING HOURS";
+        if (karaokeNavLink) {
+            karaokeNavLink.textContent = "KARAOKE";
         }
 
-        if (contactLink) {
-            contactLink.textContent = "CONTACT";
+        if (bookingNavLink) {
+            bookingNavLink.textContent = "BOOK";
         }
 
         if (openingTitle) {
