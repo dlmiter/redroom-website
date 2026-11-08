@@ -347,6 +347,34 @@ function renderStaticLanguage() {
             galleryTitle.textContent = "GALLERI";
         }
 
+        if (homeBookingTitle) {
+            homeBookingTitle.textContent = "BOKA RED ROOM";
+        }
+
+        if (homeBookingIntro) {
+            homeBookingIntro.textContent = "För grupper, fester och privata kvällar.";
+        }
+
+        if (homeBookingVenueTitle) {
+            homeBookingVenueTitle.textContent = "ABONNERA RED ROOM";
+        }
+
+        if (homeBookingVenueText) {
+            homeBookingVenueText.textContent = "Hela lokalen för större sällskap.";
+        }
+
+        if (homeBookingKaraokeTitle) {
+            homeBookingKaraokeTitle.textContent = "PRIVAT KARAOKE";
+        }
+
+        if (homeBookingKaraokeText) {
+            homeBookingKaraokeText.textContent = "För grupper på 10+ personer söndag–tisdag.";
+        }
+
+        if (homeBookingLink) {
+            homeBookingLink.textContent = "LÄS MER & BOKA";
+        }
+
         if (footerContactTitle) {
             footerContactTitle.textContent = "KONTAKT";
         }
@@ -395,6 +423,34 @@ function renderStaticLanguage() {
 
         if (galleryTitle) {
             galleryTitle.textContent = "GALLERY";
+        }
+
+        if (homeBookingTitle) {
+            homeBookingTitle.textContent = "BOOK RED ROOM";
+        }
+
+        if (homeBookingIntro) {
+            homeBookingIntro.textContent = "For groups, parties and private events.";
+        }
+
+        if (homeBookingVenueTitle) {
+            homeBookingVenueTitle.textContent = "PRIVATE VENUE HIRE";
+        }
+
+        if (homeBookingVenueText) {
+            homeBookingVenueText.textContent = "The entire venue for larger groups.";
+        }
+
+        if (homeBookingKaraokeTitle) {
+            homeBookingKaraokeTitle.textContent = "PRIVATE KARAOKE";
+        }
+
+        if (homeBookingKaraokeText) {
+            homeBookingKaraokeText.textContent = "For groups of 10+ Sunday–Tuesday.";
+        }
+
+        if (homeBookingLink) {
+            homeBookingLink.textContent = "LEARN MORE & BOOK";
         }
 
         if (footerContactTitle) {
