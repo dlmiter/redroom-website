@@ -327,6 +327,10 @@ function renderStaticLanguage() {
             footerContactTitle.textContent = "KONTAKT";
         }
 
+        if (footerGroupBookingLink) {
+            footerGroupBookingLink.textContent = "PRIVATBOKNING & GRUPPER";
+        }
+
         if (footerFaqLink) {
             footerFaqLink.textContent = "VANLIGA FRÅGOR";
         }
@@ -371,6 +375,10 @@ function renderStaticLanguage() {
 
         if (footerContactTitle) {
             footerContactTitle.textContent = "CONTACT";
+        }
+
+        if (footerGroupBookingLink) {
+            footerGroupBookingLink.textContent = "PRIVATE BOOKINGS & GROUPS";
         }
 
         if (footerFaqLink) {
