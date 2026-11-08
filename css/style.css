@@ -1131,26 +1131,6 @@ main {
     text-align: center !important;
 }
 
-.footer-booking-link {
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 48px;
-
-    color: #ffdeab !important;
-
-    font-size: 1.7rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-
-    text-decoration: none;
-}
-
-.footer-booking-link:hover,
-.footer-booking-link:focus-visible {
-    text-decoration: underline;
-}
-
 .footer-group-booking-link {
     display: inline-flex;
     align-items: center;
