@@ -288,8 +288,32 @@ function renderStaticLanguage() {
     const galleryTitle =
         document.getElementById("gallery-title");
 
+    const homeBookingTitle =
+        document.getElementById("home-booking-title");
+
+    const homeBookingIntro =
+        document.getElementById("home-booking-intro");
+
+    const homeBookingVenueTitle =
+        document.getElementById("home-booking-venue-title");
+
+    const homeBookingVenueText =
+        document.getElementById("home-booking-venue-text");
+
+    const homeBookingKaraokeTitle =
+        document.getElementById("home-booking-karaoke-title");
+
+    const homeBookingKaraokeText =
+        document.getElementById("home-booking-karaoke-text");
+
+    const homeBookingLink =
+        document.getElementById("home-booking-link");
+
     const footerContactTitle =
         document.getElementById("footer-contact-title");
+
+    const footerGroupBookingLink =
+        document.getElementById("footer-group-booking-link");
 
     const footerFaqLink =
         document.getElementById("footer-faq-link");
