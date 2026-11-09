@@ -214,9 +214,29 @@
                 );
             }
         }
+
+        const bookingHash = window.location.hash;
+
+        if (bookingHash) {
+            const targetBooking =
+                document.querySelector(bookingHash);
+
+            if (
+                targetBooking &&
+                targetBooking.tagName.toLowerCase() === "details"
+            ) {
+                targetBooking.open = true;
+
+                window.requestAnimationFrame(() => {
+                    targetBooking.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                });
+            }
+        }
     </script>
 
 </body>
-
 </html>
 
