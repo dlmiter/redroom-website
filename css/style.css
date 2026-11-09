@@ -89,6 +89,10 @@ iframe {
     -webkit-tap-highlight-color: transparent;
 }
 
+#nav-booking-link {
+    color: #ffdeab;
+}
+
 .language-toggle {
     display: flex;
     align-items: center;
@@ -1117,7 +1121,7 @@ main {
 
 .footer-grid h2 {
     margin: 0 0 1.25rem;
-    font-size: 1.35rem;
+    font-size: 1.55rem;
     letter-spacing: 0.08em;
 }
 
@@ -1135,7 +1139,7 @@ main {
 
     min-height: 44px;
 
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 600;
 
     text-decoration: none;
@@ -1149,7 +1153,7 @@ main {
 .footer-grid address {
     margin-top: 1rem;
 
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-style: normal;
 }
@@ -1227,7 +1231,7 @@ main {
 
     color: #ffdeab !important;
 
-    font-size: 1.2rem;
+    font-size: 1.45rem;
     font-weight: 800;
     letter-spacing: 0.05em;
 
@@ -1248,7 +1252,7 @@ main {
 
     color: #ffffff !important;
 
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: 700;
     letter-spacing: 0.05em;
 
@@ -1267,7 +1271,7 @@ main {
 
     .footer-grid {
         grid-template-columns: 1fr;
-        gap: 1.75rem;
+        gap: 2rem;
     }
 
     .footer-grid section,
@@ -1279,7 +1283,43 @@ main {
 
     .footer-grid h2 {
         margin-bottom: 0.75rem;
+        font-size: 1.9rem;
     }
+
+    .footer-contact a {
+        font-size: 1.6rem;
+    }
+
+    .footer-grid address {
+        font-size: 1.5rem;
+    }
+
+    .footer-group-booking-link {
+        font-size: 1.8rem;
+    }
+
+    .footer-faq-link {
+        font-size: 1.6rem;
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .instagram-icon .fa-instagram {
+        font-size: 3rem;
+    }
+
+    .facebook-icon .fa-facebook-f {
+        font-size: 2.85rem;
+    }
+}
 
     .footer-bottom {
         margin-top: 2rem;
