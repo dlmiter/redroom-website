@@ -1321,16 +1321,6 @@ main {
     }
 }
 
-    .footer-bottom {
-        margin-top: 2rem;
-        text-align: left;
-    }
-
-    .social-icons {
-        justify-content: flex-start;
-    }
-}
-
 /* Instagram heading */
 
 .gallery-title {
