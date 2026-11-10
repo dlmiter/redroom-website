@@ -1224,6 +1224,12 @@ main {
     text-align: center !important;
 }
 
+.restaurant-guru-award {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 .footer-group-booking-link {
     display: inline-flex;
     align-items: center;
