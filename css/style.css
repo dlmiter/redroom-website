@@ -81,6 +81,7 @@ iframe {
     min-height: 44px;
 
     color: #ffffff;
+    font-size: 1.15rem;
     font-weight: 700;
     text-decoration: none;
 
@@ -442,7 +443,7 @@ main {
     }
 
     .nav-links a {
-        font-size: clamp(0.65rem, 2.6vw, 0.85rem);
+        font-size: clamp(1rem, 4.2vw, 1.2rem);
         white-space: nowrap;
     }
 
@@ -479,7 +480,7 @@ main {
     }
 
     html[lang="en"] .nav-links a {
-        font-size: clamp(0.58rem, 2.25vw, 0.75rem);
+        font-size: clamp(0.9rem, 3.8vw, 1.1rem);
     }
 
     html[lang="en"] .karaoke-summary-row .karaoke-day,
