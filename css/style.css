@@ -1121,7 +1121,7 @@ main {
 
 .footer-grid h2 {
     margin: 0 0 1.25rem;
-    font-size: 1.55rem;
+    font-size: 1.35rem;
     letter-spacing: 0.08em;
 }
 
@@ -1139,7 +1139,7 @@ main {
 
     min-height: 44px;
 
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 600;
 
     text-decoration: none;
@@ -1153,7 +1153,7 @@ main {
 .footer-grid address {
     margin-top: 1rem;
 
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     line-height: 1.6;
     font-style: normal;
 }
@@ -1231,7 +1231,7 @@ main {
 
     color: #ffdeab !important;
 
-    font-size: 1.45rem;
+    font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: 0.05em;
 
@@ -1252,7 +1252,7 @@ main {
 
     color: #ffffff !important;
 
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.05em;
 
