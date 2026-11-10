@@ -1284,41 +1284,15 @@ main {
 
     .footer-grid h2 {
         margin-bottom: 0.75rem;
-        font-size: 1.9rem;
-    }
-
-    .footer-contact a {
-        font-size: 1.6rem;
-    }
-
-    .footer-grid address {
-        font-size: 1.5rem;
-    }
-
-    .footer-group-booking-link {
-        font-size: 1.8rem;
-    }
-
-    .footer-faq-link {
-        font-size: 1.6rem;
     }
 
     .footer-bottom {
         margin-top: 2rem;
-        font-size: 1.2rem;
         text-align: left;
     }
 
     .social-icons {
         justify-content: flex-start;
-    }
-
-    .instagram-icon .fa-instagram {
-        font-size: 3rem;
-    }
-
-    .facebook-icon .fa-facebook-f {
-        font-size: 2.85rem;
     }
 }
 
