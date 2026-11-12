@@ -1248,6 +1248,12 @@ main {
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
+    height: 108px;
+}
+
+.restaurant-guru-award #rg26-circle-r-ribbon {
+    transform: scale(0.8);
+    transform-origin: top center;
 }
 
 .footer-group-booking-link {
