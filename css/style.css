@@ -473,6 +473,26 @@ main {
         gap: 0.5rem;
     }
 
+    .hours-row.is-today {
+    gap: 0.5rem;
+}
+
+.hours-row.is-today .hours-current-day {
+    min-width: 0;
+    gap: 0.3rem;
+}
+
+.hours-row.is-today .hours-open,
+.hours-row.is-today .hours-day {
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.hours-row.is-today .hours-time {
+    font-size: 1.45rem;
+    white-space: nowrap;
+}
+
     .karaoke-summary-row .karaoke-day,
     .hours-summary-row .hours-day {
         font-size: 0.9rem;
