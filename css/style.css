@@ -484,12 +484,12 @@ main {
 
 .hours-row.is-today .hours-open,
 .hours-row.is-today .hours-day {
-    font-size: 1.04rem;
+    font-size: 1.15rem;
     white-space: nowrap;
 }
 
 .hours-row.is-today .hours-time {
-    font-size: 1.9rem;
+    font-size: 1.65rem;
     white-space: nowrap;
 }
 
