@@ -1569,3 +1569,11 @@ main {
         font-size: 1.15rem;
     }
 }
+
+
+/* ---------- Instagram/Reels temporarily hidden ---------- */
+
+.instagram-section,
+.reel-viewer {
+    display: none !important;
+}
