@@ -1591,10 +1591,12 @@ main {
     width: min(320px, 100%);
     height: auto;
     margin-top: 0.35rem;
+    margin-left: 1.5rem;
 }
 
 @media (max-width: 650px) {
     .handwritten-mail-note {
         width: min(250px, 100%);
+        margin-left: 0;
     }
 }
