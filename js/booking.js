@@ -44,6 +44,15 @@ document
             element.dataset[currentLanguage];
     });
 
+document
+    .querySelectorAll("[data-sv-src][data-en-src]")
+    .forEach((image) => {
+        image.src =
+            currentLanguage === "en"
+                ? image.dataset.enSrc
+                : image.dataset.svSrc;
+    });
+
 const description =
     document.querySelector('meta[name="description"]');
 
