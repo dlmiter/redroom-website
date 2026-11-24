@@ -485,6 +485,16 @@ function renderStaticLanguage() {
 
 function renderEverything() {
     renderStaticLanguage();
+
+    document
+        .querySelectorAll("[data-sv-src][data-en-src]")
+        .forEach((image) => {
+            image.src =
+                currentLanguage === "sv"
+                    ? image.dataset.svSrc
+                    : image.dataset.enSrc;
+        });
+
     renderOpeningHours();
     renderKaraokeSchedule();
 }
