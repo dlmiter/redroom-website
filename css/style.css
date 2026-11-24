@@ -473,25 +473,45 @@ main {
         gap: 0.5rem;
     }
 
+    .karaoke-row.is-current {
+        gap: 0.5rem;
+    }
+
+    .karaoke-row.is-current .karaoke-current-day {
+        min-width: 0;
+        gap: 0.3rem;
+    }
+
+    .karaoke-row.is-current .karaoke-status,
+    .karaoke-row.is-current .karaoke-day {
+        font-size: 1.15rem;
+        white-space: nowrap;
+    }
+
+    .karaoke-row.is-current .karaoke-time {
+        font-size: 1.65rem;
+        white-space: nowrap;
+    }
+
     .hours-row.is-today {
-    gap: 0.5rem;
-}
+        gap: 0.5rem;
+    }
 
-.hours-row.is-today .hours-current-day {
-    min-width: 0;
-    gap: 0.3rem;
-}
+    .hours-row.is-today .hours-current-day {
+        min-width: 0;
+        gap: 0.3rem;
+    }
 
-.hours-row.is-today .hours-open,
-.hours-row.is-today .hours-day {
-    font-size: 1.15rem;
-    white-space: nowrap;
-}
+    .hours-row.is-today .hours-open,
+    .hours-row.is-today .hours-day {
+        font-size: 1.15rem;
+        white-space: nowrap;
+    }
 
-.hours-row.is-today .hours-time {
-    font-size: 1.65rem;
-    white-space: nowrap;
-}
+    .hours-row.is-today .hours-time {
+        font-size: 1.65rem;
+        white-space: nowrap;
+    } 
 
     .karaoke-summary-row .karaoke-day,
     .hours-summary-row .hours-day {
