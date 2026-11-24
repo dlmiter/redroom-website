@@ -1590,8 +1590,15 @@ main {
     display: block;
     width: min(320px, 100%);
     height: auto;
-    margin-top: -0.5rem;
     margin-left: 1.5rem;
+}
+
+#footer-mail-note {
+    margin-top: -0.5rem;
+}
+
+#booking-mail-note {
+    margin-top: -0.5rem;
 }
 
 @media (max-width: 650px) {
