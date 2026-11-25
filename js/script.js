@@ -648,3 +648,29 @@ if (galleryStrip && galleryImages.length > 0) {
 
     desktopGallery.addEventListener("change", startGalleryAutoScroll);
 }
+
+/* ---------- Sliding navbar ---------- */
+
+const navbar = document.querySelector(".navbar");
+
+if (navbar) {
+    let lastScrollY = Math.max(window.scrollY, 0);
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            const currentScrollY = Math.max(window.scrollY, 0);
+
+            if (currentScrollY <= navbar.offsetHeight) {
+                navbar.classList.remove("navbar-hidden");
+            } else if (currentScrollY > lastScrollY + 4) {
+                navbar.classList.add("navbar-hidden");
+            } else if (currentScrollY < lastScrollY - 4) {
+                navbar.classList.remove("navbar-hidden");
+            }
+
+            lastScrollY = currentScrollY;
+        },
+        { passive: true }
+    );
+}
