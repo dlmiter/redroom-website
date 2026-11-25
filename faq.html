@@ -174,31 +174,117 @@
     </main>
 
     <script>
-        const savedLanguage =
+        const languageToggle =
+            document.getElementById("language-toggle");
+
+        const bookingNavLink =
+            document.getElementById("nav-booking-link");
+
+        let currentLanguage =
             localStorage.getItem("redroom-language") || "sv";
 
-        document.documentElement.lang = savedLanguage;
+        function renderLanguage() {
+            document.documentElement.lang = currentLanguage;
 
-        document
-            .querySelectorAll("[data-sv][data-en]")
-            .forEach((element) => {
-                element.textContent =
-                    element.dataset[savedLanguage];
-            });
+            document
+                .querySelectorAll("[data-sv][data-en]")
+                .forEach((element) => {
+                    element.textContent =
+                        element.dataset[currentLanguage];
+                });
 
-        if (savedLanguage === "en") {
-            document.title =
-                "FAQ | Red room Uppsala";
+            if (bookingNavLink) {
+                bookingNavLink.textContent =
+                    currentLanguage === "sv"
+                        ? "BOKA"
+                        : "BOOK";
+            }
+
+            if (languageToggle) {
+                languageToggle.textContent =
+                    currentLanguage === "sv"
+                        ? "🇬🇧"
+                        : "🇸🇪";
+
+                languageToggle.setAttribute(
+                    "aria-label",
+                    currentLanguage === "sv"
+                        ? "Switch to English"
+                        : "Byt till svenska"
+                );
+            }
 
             const description =
                 document.querySelector('meta[name="description"]');
 
-            if (description) {
-                description.setAttribute(
-                    "content",
-                    "Frequently asked questions about karaoke, reservations and the age limit at Red room in Uppsala."
-                );
+            if (currentLanguage === "en") {
+                document.title =
+                    "FAQ | Red room Uppsala";
+
+                if (description) {
+                    description.setAttribute(
+                        "content",
+                        "Frequently asked questions about karaoke, reservations and the age limit at Red room in Uppsala."
+                    );
+                }
+            } else {
+                document.title =
+                    "Vanliga frågor | Red room Uppsala";
+
+                if (description) {
+                    description.setAttribute(
+                        "content",
+                        "Vanliga frågor om karaoke, bokning och åldersgräns på Red room i Uppsala."
+                    );
+                }
             }
+        }
+
+        if (languageToggle) {
+            languageToggle.addEventListener("click", () => {
+                currentLanguage =
+                    currentLanguage === "sv"
+                        ? "en"
+                        : "sv";
+
+                localStorage.setItem(
+                    "redroom-language",
+                    currentLanguage
+                );
+
+                renderLanguage();
+            });
+        }
+
+        renderLanguage();
+
+        /* ---------- Sliding navbar ---------- */
+
+        const navbar =
+            document.querySelector(".navbar");
+
+        if (navbar) {
+            let lastScrollY =
+                Math.max(window.scrollY, 0);
+
+            window.addEventListener(
+                "scroll",
+                () => {
+                    const currentScrollY =
+                        Math.max(window.scrollY, 0);
+
+                    if (currentScrollY <= navbar.offsetHeight) {
+                        navbar.classList.remove("navbar-hidden");
+                    } else if (currentScrollY > lastScrollY + 4) {
+                        navbar.classList.add("navbar-hidden");
+                    } else if (currentScrollY < lastScrollY - 4) {
+                        navbar.classList.remove("navbar-hidden");
+                    }
+
+                    lastScrollY = currentScrollY;
+                },
+                { passive: true }
+            );
         }
     </script>
 
