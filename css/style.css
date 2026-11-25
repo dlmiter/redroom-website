@@ -34,14 +34,26 @@ iframe {
 .site-header {
     background: #c1121f;
     color: #ffffff;
+    padding-top: 65px;
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
     width: 100%;
     margin: 0;
     padding: 0.65rem 0;
 
     background: #111111;
+
+    transition: transform 0.25s ease;
+}
+
+.navbar.navbar-hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
