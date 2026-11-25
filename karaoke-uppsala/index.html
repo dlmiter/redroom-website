@@ -261,47 +261,117 @@
     </main>
 
     <script>
-        const savedLanguage =
+        const languageToggle =
+            document.getElementById("language-toggle");
+
+        const bookingNavLink =
+            document.getElementById("nav-booking-link");
+
+        let currentLanguage =
             localStorage.getItem("redroom-language") || "sv";
 
-        const currentLanguage =
-            savedLanguage === "en" ? "en" : "sv";
+        function renderLanguage() {
+            document.documentElement.lang = currentLanguage;
 
-        document.documentElement.lang = currentLanguage;
+            document
+                .querySelectorAll("[data-sv][data-en]")
+                .forEach((element) => {
+                    element.textContent =
+                        element.dataset[currentLanguage];
+                });
 
-        document
-            .querySelectorAll("[data-sv][data-en]")
-            .forEach((element) => {
-                element.textContent =
-                    element.dataset[currentLanguage];
+            if (bookingNavLink) {
+                bookingNavLink.textContent =
+                    currentLanguage === "sv"
+                        ? "BOKA"
+                        : "BOOK";
+            }
+
+            if (languageToggle) {
+                languageToggle.textContent =
+                    currentLanguage === "sv"
+                        ? "🇬🇧"
+                        : "🇸🇪";
+
+                languageToggle.setAttribute(
+                    "aria-label",
+                    currentLanguage === "sv"
+                        ? "Switch to English"
+                        : "Byt till svenska"
+                );
+            }
+
+            const description =
+                document.querySelector('meta[name="description"]');
+
+            if (currentLanguage === "en") {
+                document.title =
+                    "Karaoke in Uppsala | Red room";
+
+                if (description) {
+                    description.setAttribute(
+                        "content",
+                        "Karaoke in Uppsala at Red room, Kungsgatan 41. Open mic karaoke Wednesday to Saturday with a KJ, pool and a social pub atmosphere."
+                    );
+                }
+            } else {
+                document.title =
+                    "Karaoke i Uppsala | Red room";
+
+                if (description) {
+                    description.setAttribute(
+                        "content",
+                        "Karaoke i Uppsala på Red room, Kungsgatan 41. Open mic-karaoke onsdag till lördag med KJ, biljard och en social pubmiljö."
+                    );
+                }
+            }
+        }
+
+        if (languageToggle) {
+            languageToggle.addEventListener("click", () => {
+                currentLanguage =
+                    currentLanguage === "sv"
+                        ? "en"
+                        : "sv";
+
+                localStorage.setItem(
+                    "redroom-language",
+                    currentLanguage
+                );
+
+                renderLanguage();
             });
+        }
 
-        const description =
-            document.querySelector('meta[name="description"]');
+        renderLanguage();
 
-        if (currentLanguage === "en") {
+        /* ---------- Sliding navbar ---------- */
 
-            document.title =
-                "Karaoke in Uppsala | Red room";
+        const navbar =
+            document.querySelector(".navbar");
 
-            if (description) {
-                description.setAttribute(
-                    "content",
-                    "Karaoke in Uppsala at Red room, Kungsgatan 41. Open mic karaoke Wednesday to Saturday with a KJ, pool and a social pub atmosphere."
-                );
-            }
+        if (navbar) {
+            let lastScrollY =
+                Math.max(window.scrollY, 0);
 
-        } else {
+            window.addEventListener(
+                "scroll",
+                () => {
+                    const currentScrollY =
+                        Math.max(window.scrollY, 0);
 
-            document.title =
-                "Karaoke i Uppsala | Red room";
+                    if (currentScrollY <= navbar.offsetHeight) {
+                        navbar.classList.remove("navbar-hidden");
+                    } else if (currentScrollY > lastScrollY + 4) {
+                        navbar.classList.add("navbar-hidden");
+                    } else if (currentScrollY < lastScrollY - 4) {
+                        navbar.classList.remove("navbar-hidden");
+                    }
 
-            if (description) {
-                description.setAttribute(
-                    "content",
-                    "Karaoke i Uppsala på Red room, Kungsgatan 41. Open mic-karaoke onsdag till lördag med KJ, biljard och en social pubmiljö."
-                );
-            }
+                    lastScrollY = currentScrollY;
+                },
+                { passive: true }
+            );
         }
     </script>
 
