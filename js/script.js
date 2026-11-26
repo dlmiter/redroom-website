@@ -368,7 +368,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingKaraokeText) {
-            homeBookingKaraokeText.textContent = "För grupper på 10+ personer söndag–tisdag.";
+            homeBookingKaraokeText.textContent = "För grupper på 10+ personer söndag–onsdag.";
         }
 
         if (homeBookingLink) {
@@ -446,7 +446,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingKaraokeText) {
-            homeBookingKaraokeText.textContent = "For groups of 10+ Sunday–Tuesday.";
+            homeBookingKaraokeText.textContent = "For groups of 10+ Sunday–Wednesday.";
         }
 
         if (homeBookingLink) {
