@@ -360,7 +360,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingVenueText) {
-            homeBookingVenueText.textContent = "Hela lokalen för större sällskap.";
+            homeBookingVenueText.textContent = "För företag, fester och större sällskap.";
         }
 
         if (homeBookingKaraokeTitle) {
@@ -438,7 +438,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingVenueText) {
-            homeBookingVenueText.textContent = "The entire venue for larger groups.";
+            homeBookingVenueText.textContent = "For companies, parties and larger groups.";
         }
 
         if (homeBookingKaraokeTitle) {
