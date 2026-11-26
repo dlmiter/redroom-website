@@ -1749,7 +1749,6 @@ html[lang="en"] .privacy-copy-en {
 .karaoke-schedule,
 .opening-hours-list {
     --schedule-left-column: 28rem;
-    --schedule-time-column: 4.5rem;
     --schedule-gap: 1.5rem;
     --schedule-indent: 8.5rem;
 
@@ -1763,7 +1762,7 @@ html[lang="en"] .privacy-copy-en {
     display: grid;
     grid-template-columns:
         var(--schedule-left-column)
-        var(--schedule-time-column);
+        max-content;
 
     align-items: baseline;
     column-gap: var(--schedule-gap);
