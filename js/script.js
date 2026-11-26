@@ -336,7 +336,7 @@ function renderStaticLanguage() {
 
         if (karaokeOpenMicText) {
             karaokeOpenMicText.textContent =
-                "OPEN MIC — ONSDAG–LÖRDAG — INGEN BOKNING KRÄVS";
+                "OPEN MIC — INGEN BOKNING KRÄVS";
         }
 
         if (bookingNavLink) {
@@ -419,7 +419,7 @@ function renderStaticLanguage() {
 
         if (karaokeOpenMicText) {
             karaokeOpenMicText.textContent =
-                "OPEN MIC — WEDNESDAY–SATURDAY — NO BOOKING REQUIRED";
+                "OPEN MIC — NO BOOKING REQUIRED";
         }
 
         if (bookingNavLink) {
