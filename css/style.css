@@ -1783,7 +1783,11 @@ html[lang="en"] .privacy-copy-en {
     text-align: left;
 }
 
-.karaoke-summary-row .karaoke-day,
+.karaoke-summary-row .karaoke-day {
+    text-align: left;
+    padding-left: 17rem;
+}
+
 .hours-summary-row .hours-day {
     text-align: right;
 }
