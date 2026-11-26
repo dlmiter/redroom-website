@@ -334,6 +334,11 @@ function renderStaticLanguage() {
             karaokeNavLink.textContent = "KARAOKE";
         }
 
+        if (karaokeOpenMicText) {
+            karaokeOpenMicText.textContent =
+                "OPEN MIC • ONSDAG–LÖRDAG • INGEN BOKNING KRÄVS";
+        }
+
         if (bookingNavLink) {
             bookingNavLink.textContent = "BOKA";
         }
@@ -410,6 +415,11 @@ function renderStaticLanguage() {
 
         if (karaokeNavLink) {
             karaokeNavLink.textContent = "KARAOKE";
+        }
+
+        if (karaokeOpenMicText) {
+            karaokeOpenMicText.textContent =
+                "OPEN MIC • WEDNESDAY–SATURDAY • NO BOOKING REQUIRED";
         }
 
         if (bookingNavLink) {
