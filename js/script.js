@@ -214,8 +214,8 @@ function renderKaraokeSchedule() {
 
     const statusText =
         currentLanguage === "sv"
-            ? (isLive ? "IGÅNG (NU)" : "BÖRJAR")
-            : (isLive ? "ON NOW" : "STARTS");
+            ? (isLive ? "IGÅNG" : "BÖRJAR")
+            : (isLive ? "RUNNING" : "STARTS");
 
     const displayedDay =
         dayNames[currentLanguage][displayedDayIndex];
