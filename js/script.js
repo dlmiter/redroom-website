@@ -276,6 +276,9 @@ function renderStaticLanguage() {
     const karaokeNavLink =
         document.getElementById("nav-karaoke-link");
 
+    const karaokeOpenMicText =
+        document.getElementById("karaoke-open-mic-text");
+
     const bookingNavLink =
         document.getElementById("nav-booking-link");
 
