@@ -356,7 +356,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingVenueTitle) {
-            homeBookingVenueTitle.textContent = "ABONNERA RED ROOM";
+            homeBookingVenueTitle.textContent = "FÖRETAGSEVENT & PRIVATBOKNING";
         }
 
         if (homeBookingVenueText) {
@@ -434,7 +434,7 @@ function renderStaticLanguage() {
         }
 
         if (homeBookingVenueTitle) {
-            homeBookingVenueTitle.textContent = "PRIVATE VENUE HIRE";
+            homeBookingVenueTitle.textContent = "CORPORATE EVENTS & PRIVATE BOOKINGS";
         }
 
         if (homeBookingVenueText) {
