@@ -205,11 +205,11 @@ main {
 }
 
 .karaoke-open-mic-text {
-    margin: -3.1rem auto 1.75rem;
+    margin: -3.8rem auto 1.75rem;
     color: #ffffff;
-    font-size: 0.82rem;
+    font-size: 0.95rem;
     font-weight: 800;
-    font-style: italic;
+    font-style: normal;
     letter-spacing: 0.06em;
     text-align: center;
 }
