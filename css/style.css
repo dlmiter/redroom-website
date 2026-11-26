@@ -204,8 +204,12 @@ main {
     text-decoration: underline;
 }
 
+#karaoke-title {
+    margin-bottom: 0.75rem;
+}
+
 .karaoke-open-mic-text {
-    margin: -3.8rem auto 1.75rem;
+    margin: 0 auto 1.75rem;
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 800;
