@@ -1739,3 +1739,57 @@ html[lang="en"] .privacy-copy-en {
 .privacy-body .navbar {
     background: #c1121f;
 }
+
+/* ---------- Compact centered schedules ---------- */
+
+.karaoke-schedule,
+.opening-hours-list {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.karaoke-row,
+.hours-row {
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 1.25rem;
+
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 0.55rem 0;
+
+    border-bottom: 0;
+}
+
+.karaoke-row.is-current,
+.hours-row.is-today {
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.35rem;
+}
+
+.karaoke-summary-row,
+.hours-summary-row {
+    padding: 0.5rem 0;
+}
+
+.karaoke-current-day,
+.hours-current-day {
+    justify-content: flex-start;
+}
+
+.karaoke-time,
+.hours-time {
+    text-align: left;
+}
+
+@media (max-width: 650px) {
+    .karaoke-row,
+    .hours-row,
+    .karaoke-row.is-current,
+    .hours-row.is-today {
+        column-gap: 0.75rem;
+    }
+}
