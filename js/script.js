@@ -380,7 +380,7 @@ function renderStaticLanguage() {
         }
 
         if (footerGroupBookingLink) {
-            footerGroupBookingLink.textContent = "PRIVATBOKNING & GRUPPER";
+            footerGroupBookingLink.textContent = "FÖRETAGSEVENT & PRIVATBOKNING";
         }
 
         if (footerFaqLink) {
@@ -458,7 +458,7 @@ function renderStaticLanguage() {
         }
 
         if (footerGroupBookingLink) {
-            footerGroupBookingLink.textContent = "PRIVATE BOOKINGS & GROUPS";
+            footerGroupBookingLink.textContent = "CORPORATE EVENTS & PRIVATE BOOKINGS";
         }
 
         if (footerFaqLink) {
