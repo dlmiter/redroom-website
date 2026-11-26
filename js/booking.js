@@ -35,7 +35,38 @@ try {
 const currentLanguage =
     savedLanguage === "en" ? "en" : "sv";
 
+const languageToggle =
+    document.getElementById("language-toggle");
+
 document.documentElement.lang = currentLanguage;
+
+if (languageToggle) {
+    languageToggle.textContent =
+        currentLanguage === "sv"
+            ? "🇬🇧"
+            : "🇸🇪";
+
+    languageToggle.setAttribute(
+        "aria-label",
+        currentLanguage === "sv"
+            ? "Switch to English"
+            : "Byt till svenska"
+    );
+
+    languageToggle.addEventListener("click", () => {
+        const nextLanguage =
+            currentLanguage === "sv"
+                ? "en"
+                : "sv";
+
+        localStorage.setItem(
+            "redroom-language",
+            nextLanguage
+        );
+
+        window.location.reload();
+    });
+}
 
 document
     .querySelectorAll("[data-sv][data-en]")
