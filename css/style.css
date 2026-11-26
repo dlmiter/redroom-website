@@ -204,6 +204,15 @@ main {
     text-decoration: underline;
 }
 
+.karaoke-open-mic-text {
+    margin: -1.5rem auto 1.75rem;
+    color: #ffdeab;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
 .karaoke-schedule {
     width: min(650px, 100%);
     margin: 0 auto;
