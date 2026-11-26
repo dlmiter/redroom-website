@@ -1790,7 +1790,9 @@ html[lang="en"] .privacy-copy-en {
 }
 
 .hours-summary-row .hours-day {
-    text-align: right;
+    text-align: left;
+    padding-left: 8.5rem;
+    white-space: nowrap;
 }
 
 @media (max-width: 650px) {
