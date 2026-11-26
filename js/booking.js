@@ -63,17 +63,17 @@ if (currentLanguage === "en") {
     if (description) {
         description.setAttribute(
             "content",
-            "Book Red room privately in Uppsala. Reserve the entire venue for larger groups or arrange private karaoke Sunday to Tuesday."
+            "Corporate events, private bookings and private karaoke at Red room in Uppsala. For company parties, kickoffs, birthdays and groups. Karaoke Sunday to Wednesday."
         );
     }
 } else {
     document.title =
-        "Boka Red room | Privatbokning i Uppsala";
+        "Företagsevent & privatbokning | Red room Uppsala";
 
     if (description) {
         description.setAttribute(
             "content",
-            "Boka Red room privat i Uppsala. Abonnera hela Red room för större sällskap eller boka privat karaoke söndag till tisdag."
+            "Företagsevent, privatbokning och privat karaoke på Red room i Uppsala. För företagsfest, kickoff, födelsedag och grupper. Karaoke söndag–onsdag."
         );
     }
 }
