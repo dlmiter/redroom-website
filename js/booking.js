@@ -58,7 +58,7 @@ const description =
 
 if (currentLanguage === "en") {
     document.title =
-        "Private bookings | Red room Uppsala";
+        "Corporate events & private bookings | Red room Uppsala";
 
     if (description) {
         description.setAttribute(
