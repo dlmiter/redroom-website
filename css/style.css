@@ -1763,7 +1763,9 @@ html[lang="en"] .privacy-copy-en {
 .karaoke-row.is-current,
 .hours-row.is-today {
     margin-bottom: 1.1rem;
-    padding-bottom: 0.35rem;
+    padding-bottom: 0.85rem;
+
+    border-bottom: 3px solid #ffffff;
 }
 
 .karaoke-summary-row,
