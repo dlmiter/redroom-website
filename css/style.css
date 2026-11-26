@@ -1785,7 +1785,8 @@ html[lang="en"] .privacy-copy-en {
 
 .karaoke-summary-row .karaoke-day {
     text-align: left;
-    padding-left: 17rem;
+    padding-left: 8.5rem;
+    white-space: nowrap;
 }
 
 .hours-summary-row .hours-day {
