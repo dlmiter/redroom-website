@@ -1781,6 +1781,11 @@ html[lang="en"] .privacy-copy-en {
     text-align: left;
 }
 
+.karaoke-summary-row .karaoke-day,
+.hours-summary-row .hours-day {
+    text-align: right;
+}
+
 @media (max-width: 650px) {
     .karaoke-row,
     .hours-row {
