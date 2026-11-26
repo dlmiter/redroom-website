@@ -92,9 +92,9 @@ if (navbar) {
 
             if (currentScrollY <= navbar.offsetHeight) {
                 navbar.classList.remove("navbar-hidden");
-            } else if (currentScrollY > lastScrollY + 4) {
+            } else if (currentScrollY > lastScrollY + 20) {
                 navbar.classList.add("navbar-hidden");
-            } else if (currentScrollY < lastScrollY - 4) {
+            } else if (currentScrollY < lastScrollY - 20) {
                 navbar.classList.remove("navbar-hidden");
             }
 
