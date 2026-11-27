@@ -85,8 +85,9 @@ iframe {
 }
 
 .navbar:has(> .nav-socials) .nav-links {
-    width: 33.333%;
-    min-width: 300px;
+    width: 80%;
+    margin-left: 8%;
+    min-width: 0;
 }
 
 .nav-socials {
@@ -112,6 +113,7 @@ iframe {
 @media (max-width: 750px) {
     .navbar:has(> .nav-socials) .nav-links {
         width: auto;
+        margin-left: 0;
         min-width: 0;
         flex: 1;
         grid-template-columns: minmax(max-content, 1fr) 1fr 1fr;
